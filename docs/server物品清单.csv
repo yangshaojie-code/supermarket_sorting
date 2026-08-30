@@ -1,0 +1,10 @@
+representative_id,kind,visual_model_file,physics_model_file
+product_001,sanmingzhi,/workspace/supermarket_sorting_task/examples/supermarket_sorting/models/3dgs/shentoon/sanmingzhi_fit.ply,/workspace/supermarket_sorting_task/examples/supermarket_sorting/mjcf/retail_competition.xml
+product_002,heweidao,/workspace/supermarket_sorting_task/examples/supermarket_sorting/models/3dgs/shentoon/heweidao_fit.ply,/workspace/supermarket_sorting_task/examples/supermarket_sorting/mjcf/retail_competition.xml
+product_003,shupian,/workspace/supermarket_sorting_task/examples/supermarket_sorting/models/3dgs/shentoon/shupian_fit.ply,/workspace/supermarket_sorting_task/examples/supermarket_sorting/mjcf/retail_competition.xml
+product_004,zhijin,/workspace/supermarket_sorting_task/examples/supermarket_sorting/models/3dgs/shentoon/zhijin_fit.ply,/workspace/supermarket_sorting_task/examples/supermarket_sorting/mjcf/retail_competition.xml
+product_005,maidong,/workspace/supermarket_sorting_task/examples/supermarket_sorting/models/3dgs/shentoon/maidong_fit.ply,/workspace/supermarket_sorting_task/examples/supermarket_sorting/mjcf/retail_competition.xml
+product_007,kouxiangtang,/workspace/supermarket_sorting_task/examples/supermarket_sorting/models/3dgs/shentoon/kouxiangtang_fit.ply,/workspace/supermarket_sorting_task/examples/supermarket_sorting/mjcf/retail_competition.xml
+product_008,pingguo,/workspace/supermarket_sorting_task/examples/supermarket_sorting/models/3dgs/shentoon/pingguo_fit.ply,/workspace/supermarket_sorting_task/examples/supermarket_sorting/mjcf/retail_competition.xml
+product_009,chengzi,/workspace/supermarket_sorting_task/examples/supermarket_sorting/models/3dgs/shentoon/chengzi_fit.ply,/workspace/supermarket_sorting_task/examples/supermarket_sorting/mjcf/retail_competition.xml
+product_015,kele,/workspace/supermarket_sorting_task/examples/supermarket_sorting/models/3dgs/shentoon/kele_fit.ply,/workspace/supermarket_sorting_task/examples/supermarket_sorting/mjcf/retail_competition.xml
