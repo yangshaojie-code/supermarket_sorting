@@ -31,11 +31,21 @@ def _bounded(values: Iterable[float], count: int, limit: float, label: str) -> l
 class RosRobotController:
     """Publish base and joint commands with explicit limits and stop behavior."""
 
-    def __init__(self, node, twist_type, array_type, sensor_cache=None):
+    def __init__(
+        self,
+        node,
+        twist_type,
+        array_type,
+        sensor_cache=None,
+        max_linear: float = 0.35,
+        max_angular: float = 0.65,
+    ):
         self.node = node
         self.twist_type = twist_type
         self.array_type = array_type
         self.sensor_cache = sensor_cache
+        self.max_linear = float(max_linear)
+        self.max_angular = float(max_angular)
         self.cmd_vel_pub = node.create_publisher(twist_type, CMD_VEL_TOPIC, 10)
         self.spine_pub = node.create_publisher(array_type, SPINE_COMMAND_TOPIC, 10)
         self.head_pub = node.create_publisher(array_type, HEAD_COMMAND_TOPIC, 10)
@@ -46,8 +56,8 @@ class RosRobotController:
         if not math.isfinite(linear_x) or not math.isfinite(angular_z):
             raise ControlSafetyError("base velocity must be finite")
         message = self.twist_type()
-        message.linear.x = float(np.clip(linear_x, -0.35, 0.35))
-        message.angular.z = float(np.clip(angular_z, -0.65, 0.65))
+        message.linear.x = float(np.clip(linear_x, -self.max_linear, self.max_linear))
+        message.angular.z = float(np.clip(angular_z, -self.max_angular, self.max_angular))
         self.cmd_vel_pub.publish(message)
 
     def stop_base(self) -> None:

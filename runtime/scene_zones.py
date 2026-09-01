@@ -1,5 +1,7 @@
 """Fixed supermarket zones copied from the official Server referee config."""
 
+import math
+
 # Server referee uses MuJoCo time, not wall time.
 TIME_LIMIT_S = 420.0
 
@@ -19,6 +21,16 @@ DELIVERY_TARGET_XYZ = (-1.940, -3.410, 0.807)
 
 # Approach the table from the north (+Y) so the base stays inside delivery_base.
 DELIVERY_APPROACH_XY = (-1.940, -2.90)
+
+# Yellow picking aisle (y=1.70 / 3.25) and the official shelf-approach lane.
+# Spawn is the delivery area; the known clear path is northeast into the aisle,
+# then west along the yellow lines. Face slightly east of north (official
+# grasp yaw) so the head camera looks at the shelf face, not the aisle gap.
+SHELF_AISLE_Y = 2.475
+SHELF_AISLE_ENTRY_XY = (1.92, SHELF_AISLE_Y)
+SHELF_APPROACH_XY = (0.852, SHELF_AISLE_Y)
+SHELF_FACE_YAW = math.pi / 2.0 - math.radians(11.0)
+ROUTE_DELIVERY_TO_SHELF = (SHELF_AISLE_ENTRY_XY, SHELF_APPROACH_XY)
 
 
 def point_in_zone(point, zone) -> bool:

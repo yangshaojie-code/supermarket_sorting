@@ -3,6 +3,10 @@ import unittest
 import numpy as np
 
 from runtime.head_camera_kinematics import (
+    AISLE_SCAN_POSES,
+    HEAD_PITCH_LIMITS,
+    HEAD_YAW_LIMITS,
+    SLIDE_LIMITS,
     base_to_head_camera,
     base_to_head_camera_from_joint_state,
 )
@@ -33,6 +37,15 @@ class HeadCameraKinematicsTests(unittest.TestCase):
             base_to_head_camera_from_joint_state(("slide_joint",), (0.0,))
         with self.assertRaises(ValueError):
             base_to_head_camera(0.0, 0.51, 0.0)
+
+    def test_aisle_scan_poses_stay_inside_joint_limits(self):
+        from runtime.head_camera_kinematics import AISLE_SCAN_SPINE
+
+        self.assertTrue(SLIDE_LIMITS[0] <= AISLE_SCAN_SPINE <= SLIDE_LIMITS[1])
+        for yaw, pitch in AISLE_SCAN_POSES:
+            self.assertTrue(HEAD_YAW_LIMITS[0] <= yaw <= HEAD_YAW_LIMITS[1])
+            self.assertTrue(HEAD_PITCH_LIMITS[0] <= pitch <= HEAD_PITCH_LIMITS[1])
+            base_to_head_camera(AISLE_SCAN_SPINE, yaw, pitch)
 
 
 if __name__ == "__main__":

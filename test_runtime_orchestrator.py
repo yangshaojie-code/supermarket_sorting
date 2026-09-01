@@ -28,7 +28,10 @@ def five_order():
 
 class SceneZoneTests(unittest.TestCase):
     def test_official_table_is_inside_delivery_box(self):
+        from runtime.scene_zones import SHELF_APPROACH_XY
+
         self.assertTrue(in_picking_zone((1.92, 2.475)))
+        self.assertTrue(in_picking_zone(SHELF_APPROACH_XY))
         self.assertTrue(in_delivery_base((-1.94, -2.90)))
         self.assertTrue(in_delivery_box(DELIVERY_TARGET_XYZ))
         self.assertFalse(in_delivery_box((-1.94, -2.90, 0.80)))

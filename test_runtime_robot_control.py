@@ -45,6 +45,15 @@ class RobotControlTests(unittest.TestCase):
         self.assertEqual(node.publishers[0].messages[-1].linear.x, 0.0)
         self.assertEqual(node.publishers[0].messages[-1].angular.z, 0.0)
 
+    def test_custom_base_limits_are_used_when_set(self):
+        node = FakeNode()
+        controller = RosRobotController(
+            node, FakeTwist, FakeArray, max_linear=2.4, max_angular=4.4
+        )
+        controller.publish_velocity(9.0, -9.0)
+        self.assertAlmostEqual(node.publishers[0].messages[-1].linear.x, 2.4)
+        self.assertAlmostEqual(node.publishers[0].messages[-1].angular.z, -4.4)
+
     def test_arm_requires_seven_values_including_gripper(self):
         controller = RosRobotController(FakeNode(), FakeTwist, FakeArray)
         with self.assertRaises(ControlSafetyError):

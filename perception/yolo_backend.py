@@ -1,9 +1,24 @@
 #!/usr/bin/env python3
 """YOLO backend used by the participant baseline."""
 
+import os
 from pathlib import Path
 
 import numpy as np
+
+
+def _hide_cuda_from_this_process() -> None:
+    """Stop PyTorch/ultralytics from creating a CUDA context next to Server GS."""
+    os.environ["CUDA_VISIBLE_DEVICES"] = ""
+
+
+def _gpu_too_tight_for_yolo(torch, min_free_bytes: int = 2 * 1024**3) -> bool:
+    """True when the visible GPU cannot hold YOLO on top of Server 3DGS."""
+    try:
+        free, _total = torch.cuda.mem_get_info(0)
+    except Exception:
+        return False
+    return int(free) < min_free_bytes
 
 
 class YoloBackend:
@@ -17,6 +32,9 @@ class YoloBackend:
         weights = Path(weights)
         if not weights.is_file():
             raise FileNotFoundError(f"YOLO weights not found: {weights}")
+
+        if str(device).lower() == "cpu":
+            _hide_cuda_from_this_process()
 
         import torch
         from ultralytics import YOLO
@@ -36,6 +54,12 @@ class YoloBackend:
             torch.load = original_load
 
         print(f"[YoloBackend] loaded {weights} on {selected_device}")
+        if str(selected_device).startswith("cuda"):
+            print(
+                "[YoloBackend] warning: cuda YOLO shares the GPU with Server GS; "
+                "on an 8GB 4060 that often SIGKILLs the Server. Use --device cpu.",
+                flush=True,
+            )
 
     @staticmethod
     def _select_device(torch, requested: str):
@@ -61,6 +85,12 @@ class YoloBackend:
             arch // 10 == major and arch % 10 <= minor for arch in supported
         )
         if compatible:
+            if requested == "auto" and _gpu_too_tight_for_yolo(torch):
+                print(
+                    "[YoloBackend] GPU VRAM is tight (Server GS=1 is likely using it); "
+                    "using CPU so the Server is not OOM-killed"
+                )
+                return torch.device("cpu")
             return torch.device("cuda:0")
         if requested == "cuda":
             raise RuntimeError(

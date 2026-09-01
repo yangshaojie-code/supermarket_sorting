@@ -19,6 +19,22 @@ SLIDE_LIMITS = (-0.04, 0.87)
 HEAD_YAW_LIMITS = (-0.50, 0.50)
 HEAD_PITCH_LIMITS = (-1.18, 0.16)
 
+# Yellow-aisle look. Camera mount already pitches down ~19 deg, so joint pitch
+# near 0 looks at the shelf face ~1 m ahead. Official grasp pitch -0.6 is only
+# for close creep and hits the floor from the aisle.
+AISLE_SCAN_SPINE = 0.11
+AISLE_SCAN_HEAD = (0.0, -0.12)
+# Look at L1 first, then pitch down for L2/L3. Do not stop the scan just
+# because an upper-layer marker decoded — product_032 sits on D-L2-C3.
+AISLE_SCAN_POSES = (
+    (0.0, -0.12),
+    (0.0, -0.28),
+    (0.0, -0.50),
+    (0.0, 0.00),
+    (-0.30, -0.12),
+    (0.30, -0.12),
+)
+
 
 def _translation(values) -> np.ndarray:
     matrix = np.eye(4)

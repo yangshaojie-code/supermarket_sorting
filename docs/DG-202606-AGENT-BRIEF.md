@@ -2,7 +2,7 @@
 
 比赛要求、项目背景、文档导读在同目录 **[AGENTS.md](./AGENTS.md)**。本文只讲怎么改代码、怎么跑、哪些文件能碰。
 
-更新：2026-08-30。**先做零售初赛，不要去收尾文旅 Client。** 截止 **2026-09-15**。
+更新：2026-09-01。**先做零售初赛，不要去收尾文旅 Client。** 截止 **2026-09-15**。
 
 ## 60 秒结论
 
@@ -47,7 +47,7 @@ ArUco：`id//9` → 货架 A–E，`id%9//3` → 层 1–3，`id%3` → 列 1–
 
 本机调试 Server 常加：
 
-- `SUPERMARKET_USE_GS=0`（省渲染；正式观感是 `1`）
+- `SUPERMARKET_USE_GS=0`（只省控制调试；**YOLO 训练必须 `1`，且 4060 要分批 ply，见 A 线文档）
 - `SUPERMARKET_FIXED_BASELINE=1`，`RANDOMIZE=0`，`TASKS=product_032`
 - 补丁挂载（`screeninfo` 无 `is_primary`，否则 Server 崩）：
 
@@ -91,11 +91,11 @@ supermarket_sorting_baseline/
 
 - P0 镜像可起；P1 预检：17 关节、odom、相机 TF、KDL、640×480 RGB-D、360 点雷达、任务 JSON。
 - P2 编排干跑：1× `kele` → `DONE`。固定 Baseline `count:1` 正常。
-- P3 ArUco+YOLO 绑定已实现。YOLO 曾在 `cuda:0` 加载成功。
+- P3 ArUco+YOLO 绑定已实现。货架前、`GS=1` slim 可乐时能认出 `kele` 并绑槽。**不要**在 Server GS=1 时把 YOLO 放到 `cuda:0`（会挤死 Server）；`run_p3_preview.sh` 默认 CPU 且 `CUDA_VISIBLE_DEVICES=`。
 
-**陷阱：** P3 预览若 `markers=[] products=[]`，多半是底盘还在送货区（odom y≈−3.17），**没对着货架**。先把车开到拣货区 `y ∈ [1.70, 3.25]` 再判检测失败。
+**陷阱：** P3 预览若 `markers=[] products=[]`，先确认底盘是否对着货架（送货区 odom y≈−3.17）。`GS=0` 或 `SUPERMARKET_GS_NO_BACKGROUND=1` 时头相机没有货架/ArUco 贴图，空检测也不是「P3 代码坏了」。
 
-**未做：** 9 类采图/训练；雷达绕障；走到货架/送货接近点 `(-1.940, -2.90)`；编排接真实抓放；随机商品+障碍的 5 单；评分主入口脚本。
+**未做：** 9 类采图/训练（A 必须分批加载 3DGS，见 A 线文档）；雷达绕障；编排接真实抓放；随机商品+障碍的 5 单；评分主入口脚本。
 
 送货：桌 `(-1.940, -3.410)`，目标 z `0.807`；`delivery_base` x `[-2.42,-1.46]` y `[-3.88,-2.62]`；`delivery_box` y `[-3.63,-3.19]` z `[0.74,1.05]`。详见 `runtime/scene_zones.py`。
 
@@ -103,7 +103,7 @@ supermarket_sorting_baseline/
 
 短期一人一块，**9 类权重进 `weights/` 之前不要两人都改 `yolo_backend.py` 的类别表**。
 
-- **A 数据/YOLO：** 写采图脚本、仿真真值投影标注（仅训练）、YOLOv8s 微调、交出 `weights/supermarket9.pt` + `data.yaml`。不要改编排、限幅、`client_task_1.py`。
+- **A 数据/YOLO：** 写采图脚本、仿真真值投影标注（仅训练）、YOLOv8s 微调、交出 `weights/supermarket9.pt` + `data.yaml`。采图必须 `GS=1` 且按 `SUPERMARKET_GS_KINDS` 分批（见 A 线文档）。不要改编排、限幅、`client_task_1.py`。
 - **B 算法：** 面向货架、雷达、把 `orchestrator` 接到运动、参考官方可乐抓取迁到 `runtime/`。权重未到前用 `kele.pt` + `product_032`。不要改 A 的类别顺序和训练超参。
 
 训练时用仿真 GT 投影打框 **可以**；评分 Client 把未下发坐标当真相 **不可以**。
@@ -120,7 +120,7 @@ supermarket_sorting_baseline/
 
 ## 建议下一刀（按用户意图选线）
 
-- **A：** `scripts/capture_yolo_frames.py` + 训练标注；对着货架采 RGB。
+- **A：** `scripts/capture_yolo_frames.py`；**`GS=1` + `SUPERMARKET_GS_KINDS` 分批**对着货架采 RGB。不要用红几何体当 9 类训练集。
 - **B：** 底盘从送货区开到货架，让 P3 非空；再雷达；再 1 次可乐取送。
 - **联调：** A 的 `.pt` 就绪后改 `CLASS_NAMES` 为 9 类，换默认权重路径。
 
