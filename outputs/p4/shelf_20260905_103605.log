@@ -1,0 +1,104 @@
+p4_shelf: start xy=(1.92,-3.17) yaw=1.57 goal=(0.852,2.475) stop=0.32 planner=grid max_lin=1.20 max_ang=1.65
+p4_shelf: xy=(1.92,-3.17) yaw=1.57 wp=0/14 fwd=1.43 lin=0.00 ang=0.00 replan start plan_id=1 detours=0 plan_ms=14.6
+p4_shelf: xy=(1.92,-3.12) yaw=1.56 wp=0/14 fwd=1.41 lin=0.74 ang=0.00 cruise plan_id=2 detours=0 plan_ms=14.1
+p4_shelf: xy=(1.92,-2.98) yaw=1.57 wp=0/14 fwd=1.41 lin=0.66 ang=0.08 cruise plan_id=3 detours=0 plan_ms=16.9
+p4_shelf: xy=(1.92,-2.76) yaw=1.58 wp=1/14 fwd=1.47 lin=1.10 ang=0.00 cruise plan_id=3 detours=0 plan_ms=16.9
+p4_shelf: xy=(1.92,-2.50) yaw=1.59 wp=2/14 fwd=1.52 lin=1.16 ang=0.00 cruise plan_id=3 detours=0 plan_ms=16.9
+p4_shelf: xy=(1.91,-2.28) yaw=1.59 wp=1/13 fwd=1.53 lin=1.13 ang=0.00 cruise plan_id=4 detours=0 plan_ms=13.7
+p4_shelf: xy=(1.91,-2.00) yaw=1.59 wp=1/12 fwd=1.55 lin=1.16 ang=0.00 cruise plan_id=5 detours=0 plan_ms=12.1
+p4_shelf: xy=(1.90,-1.75) yaw=1.59 wp=1/11 fwd=1.56 lin=1.16 ang=0.00 cruise plan_id=6 detours=0 plan_ms=11.6
+p4_shelf: xy=(1.90,-1.46) yaw=1.59 wp=1/11 fwd=1.58 lin=0.76 ang=0.00 cruise plan_id=6 detours=0 plan_ms=11.6
+p4_shelf: xy=(1.89,-1.22) yaw=1.59 wp=1/10 fwd=1.59 lin=1.16 ang=0.00 cruise plan_id=7 detours=0 plan_ms=10.0
+p4_shelf: xy=(1.89,-1.01) yaw=1.59 wp=1/10 fwd=1.60 lin=1.16 ang=0.00 cruise plan_id=8 detours=0 plan_ms=9.5
+p4_shelf: xy=(1.88,-0.82) yaw=1.58 wp=1/9 fwd=1.60 lin=1.17 ang=0.00 cruise plan_id=9 detours=0 plan_ms=9.7
+p4_shelf: xy=(1.88,-0.60) yaw=1.56 wp=1/9 fwd=1.52 lin=1.02 ang=0.00 cruise plan_id=9 detours=0 plan_ms=9.7
+p4_shelf: xy=(1.88,-0.34) yaw=1.56 wp=1/9 fwd=1.47 lin=1.07 ang=0.00 cruise plan_id=10 detours=0 plan_ms=8.4
+p4_shelf: xy=(1.89,-0.08) yaw=1.56 wp=1/8 fwd=1.46 lin=1.17 ang=0.00 cruise plan_id=11 detours=0 plan_ms=8.0
+p4_shelf: xy=(1.89,0.14) yaw=1.56 wp=0/7 fwd=1.45 lin=0.69 ang=0.00 cruise plan_id=12 detours=0 plan_ms=7.5
+p4_shelf: xy=(1.90,0.41) yaw=1.53 wp=0/6 fwd=1.35 lin=0.70 ang=0.00 cruise plan_id=13 detours=0 plan_ms=6.1
+p4_shelf: xy=(1.91,0.64) yaw=1.53 wp=1/6 fwd=1.31 lin=1.03 ang=0.08 cruise plan_id=13 detours=0 plan_ms=6.1
+p4_shelf: xy=(1.92,0.88) yaw=1.54 wp=1/6 fwd=1.34 lin=1.14 ang=0.00 cruise plan_id=14 detours=0 plan_ms=5.4
+p4_shelf: xy=(1.92,1.16) yaw=1.55 wp=1/5 fwd=1.36 lin=0.54 ang=0.00 cruise plan_id=15 detours=0 plan_ms=4.8
+p4_shelf: xy=(1.93,1.33) yaw=1.56 wp=0/4 fwd=1.39 lin=0.62 ang=0.10 cruise plan_id=16 detours=0 plan_ms=4.1
+p4_shelf: xy=(1.93,1.46) yaw=1.58 wp=1/4 fwd=1.48 lin=0.00 ang=0.85 turn plan_id=16 detours=0 plan_ms=4.1
+p4_shelf: xy=(1.93,1.50) yaw=1.72 wp=1/4 fwd=1.58 lin=0.00 ang=0.65 turn plan_id=16 detours=0 plan_ms=4.1
+p4_shelf: xy=(1.92,1.50) yaw=1.89 wp=1/4 fwd=1.63 lin=0.28 ang=0.23 cruise plan_id=16 detours=0 plan_ms=4.1
+p4_shelf: xy=(1.92,1.52) yaw=2.04 wp=1/4 fwd=1.61 lin=0.00 ang=0.46 turn plan_id=17 detours=0 plan_ms=3.8
+p4_shelf: xy=(1.90,1.55) yaw=2.14 wp=1/4 fwd=1.59 lin=0.33 ang=0.13 cruise plan_id=18 detours=0 plan_ms=3.8
+p4_shelf: xy=(1.86,1.60) yaw=2.18 wp=1/4 fwd=1.51 lin=0.33 ang=0.08 cruise plan_id=19 detours=0 plan_ms=4.0
+p4_shelf: xy=(1.81,1.67) yaw=2.20 wp=1/4 fwd=1.44 lin=0.31 ang=0.00 cruise plan_id=20 detours=0 plan_ms=3.8
+p4_shelf: xy=(1.76,1.75) yaw=2.20 wp=1/4 fwd=1.36 lin=0.33 ang=0.00 cruise plan_id=21 detours=0 plan_ms=3.6
+p4_shelf: xy=(1.71,1.81) yaw=2.17 wp=0/3 fwd=1.29 lin=0.28 ang=-0.24 cruise plan_id=22 detours=0 plan_ms=3.2
+p4_shelf: xy=(1.69,1.84) yaw=2.06 wp=0/4 fwd=1.24 lin=0.00 ang=-0.76 turn plan_id=23 detours=0 plan_ms=3.9
+p4_shelf: xy=(1.69,1.85) yaw=1.89 wp=0/4 fwd=1.22 lin=0.00 ang=-0.53 turn plan_id=23 detours=0 plan_ms=3.9
+p4_shelf: xy=(1.69,1.86) yaw=1.77 wp=1/5 fwd=1.22 lin=0.00 ang=0.85 turn plan_id=24 detours=0 plan_ms=3.0
+p4_shelf: xy=(1.69,1.86) yaw=1.92 wp=1/5 fwd=1.21 lin=0.00 ang=0.64 turn plan_id=24 detours=0 plan_ms=3.0
+p4_shelf: xy=(1.69,1.86) yaw=2.07 wp=1/5 fwd=1.22 lin=0.15 ang=0.25 cruise plan_id=24 detours=0 plan_ms=3.0
+p4_shelf: xy=(1.67,1.88) yaw=2.15 wp=1/5 fwd=1.20 lin=0.19 ang=0.13 cruise plan_id=25 detours=0 plan_ms=4.4
+p4_shelf: xy=(1.65,1.91) yaw=2.15 wp=1/4 fwd=1.17 lin=0.00 ang=0.97 turn plan_id=26 detours=0 plan_ms=3.1
+p4_shelf: xy=(1.65,1.92) yaw=2.32 wp=1/4 fwd=1.57 lin=0.00 ang=0.72 turn plan_id=26 detours=0 plan_ms=3.1
+p4_shelf: xy=(1.65,1.92) yaw=2.49 wp=1/4 fwd=1.58 lin=0.00 ang=0.48 turn plan_id=26 detours=0 plan_ms=3.1
+p4_shelf: xy=(1.63,1.93) yaw=2.60 wp=1/4 fwd=1.57 lin=0.29 ang=0.15 cruise plan_id=27 detours=0 plan_ms=3.6
+p4_shelf: xy=(1.59,1.95) yaw=2.64 wp=1/4 fwd=1.51 lin=0.31 ang=0.09 cruise plan_id=28 detours=0 plan_ms=3.1
+p4_shelf: xy=(1.54,1.98) yaw=2.62 wp=0/3 fwd=1.47 lin=0.00 ang=-0.77 turn plan_id=29 detours=0 plan_ms=2.7
+p4_shelf: xy=(1.53,1.99) yaw=2.44 wp=0/3 fwd=1.44 lin=0.00 ang=-0.53 turn plan_id=29 detours=0 plan_ms=2.7
+p4_shelf: xy=(1.53,1.99) yaw=2.33 wp=0/3 fwd=1.43 lin=0.33 ang=-0.12 cruise plan_id=30 detours=0 plan_ms=2.5
+p4_shelf: xy=(1.49,2.03) yaw=2.27 wp=0/3 fwd=1.39 lin=0.33 ang=0.00 cruise plan_id=31 detours=0 plan_ms=2.4
+p4_shelf: xy=(1.44,2.09) yaw=2.27 wp=0/2 fwd=1.31 lin=0.59 ang=0.20 cruise plan_id=32 detours=0 plan_ms=2.2
+p4_shelf: xy=(1.38,2.16) yaw=2.29 wp=1/2 fwd=1.22 lin=0.00 ang=0.82 turn plan_id=32 detours=0 plan_ms=2.2
+p4_shelf: xy=(1.34,2.21) yaw=2.37 wp=1/2 fwd=1.15 lin=0.00 ang=0.70 turn plan_id=32 detours=0 plan_ms=2.2
+p4_shelf: xy=(1.33,2.21) yaw=2.54 wp=1/2 fwd=1.14 lin=0.00 ang=0.43 turn plan_id=32 detours=0 plan_ms=2.2
+p4_shelf: xy=(1.31,2.23) yaw=2.65 wp=1/2 fwd=1.13 lin=0.56 ang=0.11 cruise plan_id=33 detours=0 plan_ms=1.6
+p4_shelf: xy=(1.20,2.27) yaw=2.74 wp=1/2 fwd=1.71 lin=0.55 ang=0.00 cruise plan_id=34 detours=0 plan_ms=1.6
+p4_shelf: xy=(1.08,2.33) yaw=2.73 wp=0/1 fwd=1.58 lin=0.32 ang=-0.24 cruise plan_id=35 detours=0 plan_ms=1.4
+p4_shelf: xy=(1.00,2.36) yaw=2.67 wp=0/1 fwd=1.48 lin=0.21 ang=-0.24 cruise plan_id=36 detours=0 plan_ms=0.9
+p4_shelf: xy=(0.95,2.39) yaw=2.60 wp=0/1 fwd=1.42 lin=0.15 ang=-0.24 cruise plan_id=37 detours=0 plan_ms=1.2
+p4_shelf: xy=(0.92,2.41) yaw=2.40 wp=1/1 fwd=0.75 lin=0.00 ang=-1.48 turn plan_id=38 detours=0 plan_ms=0.5
+p4_shelf: xy=(0.92,2.41) yaw=2.03 wp=1/1 fwd=0.73 lin=0.00 ang=-0.94 turn plan_id=38 detours=0 plan_ms=0.5
+p4_shelf: xy=(0.92,2.41) yaw=1.76 wp=1/1 fwd=0.74 lin=0.00 ang=-0.55 turn plan_id=38 detours=0 plan_ms=0.5
+p4_shelf: xy=(0.92,2.41) yaw=1.60 wp=1/1 fwd=1.02 lin=0.00 ang=-0.33 turn plan_id=38 detours=0 plan_ms=0.5
+p4_shelf: xy=(0.92,2.41) yaw=1.51 wp=1/1 fwd=1.02 lin=0.00 ang=-0.20 turn plan_id=38 detours=0 plan_ms=0.5
+p4_shelf: xy=(0.92,2.41) yaw=1.46 wp=1/1 fwd=1.01 lin=0.00 ang=-0.12 turn plan_id=38 detours=0 plan_ms=0.5
+p4_shelf: xy=(0.92,2.41) yaw=1.43 wp=1/1 fwd=1.01 lin=0.00 ang=-0.08 turn plan_id=38 detours=0 plan_ms=0.5
+
+{
+  "arrived": true,
+  "goal": "shelf",
+  "in_zone": true,
+  "in_picking_zone": true,
+  "in_delivery_base": false,
+  "odom_xy": [
+    0.92,
+    2.413
+  ],
+  "yaw": 1.428,
+  "head_joints": {
+    "slide": 0.11606275481433176,
+    "head_yaw": 0.0014361096614108758,
+    "head_pitch": -0.11629879900412635
+  },
+  "goal_xy": [
+    0.852,
+    2.475
+  ],
+  "route": [
+    [
+      0.852,
+      2.475
+    ]
+  ],
+  "elapsed_s": 122.44,
+  "status": "arrived",
+  "detours": 0,
+  "plan_id": 38,
+  "plan_reason": "stuck",
+  "speed_scale": 4.0,
+  "max_lin": 1.2,
+  "max_ang": 1.65,
+  "stop_dist": 0.32,
+  "slow_dist": null,
+  "blocked_by_scan": false,
+  "log_json": "/workspace/baseline/outputs/p4/shelf_20260905_103605.json",
+  "log_txt": "/workspace/baseline/outputs/p4/shelf_20260905_103605.log"
+}
+p4 log: /workspace/baseline/outputs/p4/shelf_20260905_103605.log

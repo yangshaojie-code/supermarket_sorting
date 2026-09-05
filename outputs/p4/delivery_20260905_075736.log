@@ -1,0 +1,122 @@
+p4_delivery: start xy=(0.91,2.41) yaw=1.42 goal=(-1.940,-2.900) stop=0.43 planner=grid max_lin=1.20 max_ang=1.65
+p4_delivery: xy=(0.91,2.41) yaw=1.42 wp=0/16 fwd=1.02 lin=0.00 ang=0.00 replan start plan_id=1 detours=0 plan_ms=74.2
+p4_delivery: xy=(0.91,2.41) yaw=1.78 wp=1/16 fwd=0.73 lin=0.00 ang=1.65 turn plan_id=1 detours=0 plan_ms=74.2
+p4_delivery: xy=(0.91,2.41) yaw=2.33 wp=1/16 fwd=0.73 lin=0.00 ang=1.40 turn plan_id=1 detours=0 plan_ms=74.2
+p4_delivery: xy=(0.91,2.41) yaw=2.68 wp=1/16 fwd=1.38 lin=0.00 ang=0.93 turn plan_id=1 detours=0 plan_ms=74.2
+p4_delivery: xy=(0.91,2.41) yaw=2.91 wp=1/16 fwd=1.38 lin=0.00 ang=0.60 turn plan_id=1 detours=0 plan_ms=74.2
+p4_delivery: xy=(0.91,2.41) yaw=3.06 wp=1/16 fwd=2.19 lin=0.48 ang=0.40 cruise plan_id=1 detours=0 plan_ms=74.2
+p4_delivery: xy=(0.86,2.41) yaw=-3.12 wp=1/17 fwd=2.15 lin=0.61 ang=0.27 cruise plan_id=3 detours=0 plan_ms=53.3
+p4_delivery: xy=(0.71,2.40) yaw=-3.04 wp=1/17 fwd=2.63 lin=0.70 ang=0.14 cruise plan_id=4 detours=0 plan_ms=48.8
+p4_delivery: xy=(0.56,2.38) yaw=-3.00 wp=3/34 fwd=2.48 lin=0.59 ang=0.00 cruise plan_id=5 detours=0 plan_ms=46.6
+p4_delivery: xy=(0.42,2.36) yaw=-3.00 wp=2/26 fwd=2.33 lin=0.29 ang=-0.09 cruise plan_id=6 detours=0 plan_ms=47.3
+p4_delivery: xy=(0.33,2.35) yaw=-3.02 wp=1/16 fwd=2.24 lin=0.28 ang=0.00 cruise plan_id=7 detours=0 plan_ms=50.0
+p4_delivery: xy=(0.27,2.34) yaw=-2.96 wp=2/16 fwd=2.17 lin=0.00 ang=0.88 turn plan_id=8 detours=0 plan_ms=55.0
+p4_delivery: xy=(0.26,2.34) yaw=-2.75 wp=2/16 fwd=2.16 lin=0.00 ang=0.58 turn plan_id=8 detours=0 plan_ms=55.0
+p4_delivery: xy=(0.25,2.34) yaw=-2.60 wp=2/17 fwd=2.16 lin=0.24 ang=0.18 cruise plan_id=9 detours=0 plan_ms=43.3
+p4_delivery: xy=(0.20,2.31) yaw=-2.54 wp=2/17 fwd=2.10 lin=0.26 ang=0.09 cruise plan_id=10 detours=0 plan_ms=46.1
+p4_delivery: xy=(0.15,2.27) yaw=-2.52 wp=2/17 fwd=2.04 lin=0.25 ang=0.00 cruise plan_id=12 detours=0 plan_ms=44.7
+p4_delivery: xy=(0.09,2.22) yaw=-2.51 wp=2/17 fwd=1.97 lin=0.00 ang=1.65 recover_scan plan_id=12 detours=0 plan_ms=1.4
+p4_delivery: xy=(0.06,2.20) yaw=-2.30 wp=3/17 fwd=2.08 lin=0.00 ang=1.06 turn plan_id=12 detours=0 plan_ms=1.4
+p4_delivery: xy=(0.06,2.20) yaw=-2.02 wp=3/17 fwd=0.97 lin=0.00 ang=0.64 turn plan_id=12 detours=0 plan_ms=1.4
+p4_delivery: xy=(0.06,2.20) yaw=-1.83 wp=3/17 fwd=0.96 lin=0.00 ang=1.65 recover_scan plan_id=12 detours=0 plan_ms=1.5
+p4_delivery: xy=(0.05,2.17) yaw=-1.72 wp=0/3 fwd=0.93 lin=0.00 ang=-1.65 turn plan_id=13 detours=0 plan_ms=1.5
+p4_delivery: xy=(0.05,2.14) yaw=-2.05 wp=0/3 fwd=0.91 lin=0.00 ang=-1.65 turn plan_id=13 detours=0 plan_ms=1.5
+p4_delivery: xy=(0.05,2.14) yaw=-2.57 wp=0/3 fwd=1.92 lin=0.00 ang=-1.38 turn plan_id=13 detours=0 plan_ms=1.5
+p4_delivery: xy=(0.05,2.14) yaw=-2.96 wp=0/3 fwd=1.91 lin=0.00 ang=-0.81 turn plan_id=13 detours=0 plan_ms=1.5
+p4_delivery: xy=(0.05,2.14) yaw=3.07 wp=0/3 fwd=1.91 lin=0.00 ang=-0.45 turn plan_id=13 detours=0 plan_ms=1.5
+p4_delivery: xy=(0.04,2.14) yaw=3.05 wp=0/3 fwd=1.91 lin=0.00 ang=1.65 recover_scan plan_id=13 detours=0 plan_ms=1.9
+p4_delivery: xy=(0.01,2.14) yaw=3.05 wp=0/3 fwd=1.88 lin=0.00 ang=-0.46 turn plan_id=14 detours=0 plan_ms=2.0
+p4_delivery: xy=(-0.01,2.15) yaw=3.01 wp=0/3 fwd=1.86 lin=0.15 ang=-0.42 cruise plan_id=14 detours=0 plan_ms=1.8
+p4_delivery: xy=(-0.04,2.15) yaw=2.87 wp=1/3 fwd=2.23 lin=0.00 ang=1.65 turn plan_id=15 detours=0 plan_ms=1.9
+p4_delivery: xy=(-0.06,2.16) yaw=3.10 wp=1/3 fwd=1.81 lin=0.00 ang=1.65 turn plan_id=15 detours=0 plan_ms=1.9
+p4_delivery: xy=(-0.06,2.16) yaw=-2.66 wp=1/3 fwd=1.81 lin=0.00 ang=1.58 turn plan_id=15 detours=0 plan_ms=1.9
+p4_delivery: xy=(-0.06,2.16) yaw=-2.19 wp=1/3 fwd=2.17 lin=0.00 ang=0.90 turn plan_id=15 detours=0 plan_ms=1.9
+p4_delivery: xy=(-0.06,2.16) yaw=-1.91 wp=1/3 fwd=0.92 lin=0.00 ang=0.49 turn plan_id=15 detours=0 plan_ms=1.9
+p4_delivery: xy=(-0.07,2.14) yaw=-1.75 wp=1/3 fwd=0.90 lin=0.78 ang=0.09 cruise plan_id=15 detours=0 plan_ms=2.2
+p4_delivery: xy=(-0.08,2.07) yaw=-1.62 wp=0/2 fwd=0.84 lin=1.15 ang=0.00 cruise plan_id=16 detours=0 plan_ms=2.2
+p4_delivery: xy=(-0.07,1.93) yaw=-1.46 wp=0/2 fwd=0.70 lin=0.78 ang=-0.26 cruise plan_id=16 detours=0 plan_ms=3.1
+p4_delivery: xy=(-0.05,1.78) yaw=-1.39 wp=1/13 fwd=0.54 lin=0.00 ang=-1.40 turn plan_id=17 detours=0 plan_ms=41.2
+p4_delivery: xy=(-0.04,1.73) yaw=-1.62 wp=1/13 fwd=0.49 lin=0.00 ang=-1.07 turn plan_id=17 detours=0 plan_ms=41.2
+p4_delivery: xy=(-0.04,1.72) yaw=-1.90 wp=1/13 fwd=0.49 lin=0.00 ang=-0.67 turn plan_id=17 detours=0 plan_ms=41.2
+p4_delivery: xy=(-0.04,1.72) yaw=-2.08 wp=1/13 fwd=0.50 lin=0.42 ang=-0.57 cruise plan_id=17 detours=0 plan_ms=41.2
+p4_delivery: xy=(-0.09,1.65) yaw=-2.25 wp=1/13 fwd=1.69 lin=0.69 ang=-0.32 cruise plan_id=18 detours=0 plan_ms=45.2
+p4_delivery: xy=(-0.25,1.49) yaw=-2.40 wp=1/13 fwd=1.57 lin=0.64 ang=0.11 cruise plan_id=20 detours=0 plan_ms=40.5
+p4_delivery: xy=(-0.42,1.33) yaw=-2.40 wp=2/13 fwd=1.40 lin=0.43 ang=0.14 cruise plan_id=20 detours=0 plan_ms=40.5
+p4_delivery: xy=(-0.54,1.23) yaw=-2.38 wp=2/13 fwd=1.27 lin=0.55 ang=0.00 cruise plan_id=21 detours=0 plan_ms=43.5
+p4_delivery: xy=(-0.67,1.10) yaw=-2.38 wp=2/13 fwd=1.12 lin=0.42 ang=0.00 cruise plan_id=22 detours=0 plan_ms=42.7
+p4_delivery: xy=(-0.79,0.98) yaw=-2.38 wp=2/12 fwd=0.99 lin=0.00 ang=-0.80 turn plan_id=23 detours=0 plan_ms=40.2
+p4_delivery: xy=(-0.84,0.94) yaw=-2.46 wp=2/12 fwd=0.97 lin=0.00 ang=-0.69 turn plan_id=23 detours=0 plan_ms=40.2
+p4_delivery: xy=(-0.84,0.94) yaw=-2.63 wp=2/12 fwd=1.54 lin=0.47 ang=-0.26 cruise plan_id=23 detours=0 plan_ms=40.2
+p4_delivery: xy=(-0.86,0.93) yaw=-2.79 wp=2/12 fwd=1.50 lin=0.00 ang=-0.52 turn plan_id=24 detours=0 plan_ms=45.6
+p4_delivery: xy=(-0.89,0.92) yaw=-2.93 wp=2/12 fwd=1.28 lin=0.55 ang=-0.14 cruise plan_id=25 detours=0 plan_ms=41.8
+p4_delivery: xy=(-0.99,0.90) yaw=-2.99 wp=2/10 fwd=0.95 lin=0.00 ang=0.46 turn plan_id=26 detours=0 plan_ms=44.3
+p4_delivery: xy=(-1.07,0.89) yaw=-2.96 wp=2/10 fwd=1.29 lin=0.30 ang=0.59 cruise plan_id=26 detours=0 plan_ms=44.3
+p4_delivery: xy=(-1.11,0.88) yaw=-2.83 wp=2/11 fwd=1.25 lin=0.35 ang=0.43 cruise plan_id=28 detours=0 plan_ms=37.8
+p4_delivery: xy=(-1.21,0.84) yaw=-2.69 wp=2/11 fwd=1.17 lin=0.41 ang=0.26 cruise plan_id=29 detours=0 plan_ms=39.9
+p4_delivery: xy=(-1.31,0.78) yaw=-2.60 wp=2/12 fwd=1.08 lin=0.42 ang=0.16 cruise plan_id=30 detours=0 plan_ms=35.5
+p4_delivery: xy=(-1.42,0.71) yaw=-2.55 wp=2/12 fwd=0.98 lin=0.00 ang=1.65 blocked_no_path plan_id=31 detours=0 plan_ms=29.7
+p4_delivery: xy=(-1.49,0.66) yaw=-2.49 wp=2/12 fwd=0.92 lin=0.27 ang=0.00 cruise plan_id=31 detours=0 plan_ms=28.4
+p4_delivery: xy=(-1.53,0.64) yaw=-2.36 wp=3/12 fwd=0.92 lin=0.00 ang=1.15 turn plan_id=31 detours=0 plan_ms=28.4
+p4_delivery: xy=(-1.53,0.63) yaw=-2.07 wp=3/12 fwd=1.11 lin=0.00 ang=0.72 turn plan_id=31 detours=0 plan_ms=28.4
+p4_delivery: xy=(-1.53,0.63) yaw=-1.87 wp=0/2 fwd=1.39 lin=0.00 ang=0.91 turn plan_id=32 detours=0 plan_ms=27.2
+p4_delivery: xy=(-1.53,0.63) yaw=-1.66 wp=0/2 fwd=0.62 lin=0.00 ang=0.61 turn plan_id=32 detours=0 plan_ms=27.2
+p4_delivery: xy=(-1.53,0.63) yaw=-1.47 wp=0/2 fwd=0.53 lin=0.42 ang=0.32 safety_slow plan_id=32 detours=0 plan_ms=29.9
+p4_delivery: xy=(-1.52,0.59) yaw=-1.28 wp=0/2 fwd=0.50 lin=0.26 ang=0.00 safety_slow plan_id=32 detours=0 plan_ms=33.0
+p4_delivery: xy=(-1.50,0.53) yaw=-1.24 wp=0/2 fwd=0.44 lin=0.00 ang=1.65 recover_scan plan_id=33 detours=0 plan_ms=33.3
+p4_delivery: xy=(-1.50,0.51) yaw=-1.16 wp=0/2 fwd=0.42 lin=0.00 ang=1.65 blocked_no_path plan_id=34 detours=0 plan_ms=25.5
+p4_delivery: xy=(-1.49,0.51) yaw=-1.00 wp=0/2 fwd=0.41 lin=0.00 ang=-0.35 safety_slow plan_id=35 detours=0 plan_ms=28.1
+p4_delivery: xy=(-1.49,0.50) yaw=-0.98 wp=0/2 fwd=0.41 lin=0.02 ang=-0.38 safety_slow plan_id=36 detours=0 plan_ms=24.8
+p4_delivery: xy=(-1.49,0.50) yaw=-1.00 wp=0/2 fwd=0.40 lin=0.00 ang=1.65 blocked_no_path plan_id=37 detours=0 plan_ms=24.8
+p4_delivery: xy=(-1.48,0.49) yaw=-0.90 wp=0/2 fwd=0.42 lin=0.00 ang=0.00 replan fallback plan_id=38 detours=0 plan_ms=25.6
+p4_delivery: xy=(-1.48,0.49) yaw=-0.98 wp=0/2 fwd=0.40 lin=0.00 ang=1.65 recover_scan plan_id=38 detours=0 plan_ms=24.8
+p4_delivery: xy=(-1.48,0.49) yaw=-0.87 wp=0/2 fwd=0.42 lin=0.06 ang=-0.55 safety_slow plan_id=39 detours=0 plan_ms=28.6
+p4_delivery: xy=(-1.47,0.48) yaw=-0.94 wp=0/2 fwd=0.40 lin=0.00 ang=1.65 recover_scan plan_id=40 detours=0 plan_ms=24.4
+p4_delivery: xy=(-1.47,0.48) yaw=-0.90 wp=0/2 fwd=0.40 lin=0.00 ang=-1.65 recover_scan plan_id=41 detours=0 plan_ms=27.9
+p4_delivery: xy=(-1.47,0.48) yaw=-0.87 wp=0/2 fwd=0.41 lin=0.00 ang=-0.54 turn plan_id=41 detours=0 plan_ms=27.9
+p4_delivery: xy=(-1.47,0.48) yaw=-0.97 wp=0/2 fwd=0.39 lin=0.00 ang=1.65 recover_scan plan_id=42 detours=0 plan_ms=26.8
+
+{
+  "arrived": false,
+  "goal": "delivery",
+  "in_zone": false,
+  "in_picking_zone": false,
+  "in_delivery_base": false,
+  "odom_xy": [
+    -1.472,
+    0.478
+  ],
+  "yaw": -0.968,
+  "head_joints": {
+    "slide": 0.11606275825169923,
+    "head_yaw": 0.0004987554180937341,
+    "head_pitch": -0.11626431761028247
+  },
+  "goal_xy": [
+    -1.94,
+    -2.9
+  ],
+  "route": [
+    [
+      -0.4,
+      -2.7
+    ],
+    [
+      -1.94,
+      -2.9
+    ]
+  ],
+  "elapsed_s": 150.44,
+  "status": "safety_stop",
+  "detours": 0,
+  "plan_id": 43,
+  "plan_reason": "fallback",
+  "speed_scale": 4.0,
+  "max_lin": 1.2,
+  "max_ang": 1.65,
+  "stop_dist": 0.43,
+  "slow_dist": null,
+  "blocked_by_scan": true,
+  "log_json": "/workspace/baseline/outputs/p4/delivery_20260905_075736.json",
+  "log_txt": "/workspace/baseline/outputs/p4/delivery_20260905_075736.log"
+}
+p4 log: /workspace/baseline/outputs/p4/delivery_20260905_075736.log

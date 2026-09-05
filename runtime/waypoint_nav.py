@@ -156,6 +156,7 @@ class WaypointFollower:
     idx: int = 0
     mode: str = "turn"
     lock_idx: int = -1
+    global_mode: bool = False
     waypoints: List[Tuple[float, float]] = field(init=False)
     brake_dist: float = field(init=False)
     _prev_yaw_err: float = field(init=False, default=0.0)
@@ -216,6 +217,8 @@ class WaypointFollower:
 
     def _blocks_early_southbound(self, x: float, y: float) -> bool:
         """South from east of the hug rail clips the divider's north-west tip."""
+        if self.global_mode:
+            return False
         if self.idx + 1 >= len(self.waypoints):
             return False
         _nx, ny = self.waypoints[self.idx + 1]
@@ -225,12 +228,16 @@ class WaypointFollower:
 
     def _blocks_early_westbound(self, x: float, y: float) -> bool:
         """West from south of the yellow lane drives into the divider."""
+        if self.global_mode:
+            return False
         if self.idx + 1 >= len(self.waypoints):
             return False
         nx, ny = self.waypoints[self.idx + 1]
         if nx >= float(x) - 0.05 or ny < 1.70:
             return False
-        return float(y) < WEST_LANE_Y - 0.08
+        # y=2.22 is already on the yellow lane; blocking west there kept
+        # aiming at (1.92, 2.32) and driving into the racks.
+        return float(y) < WEST_LANE_Y - 0.20
 
     def _skip_near_waypoints(self, x: float, y: float) -> None:
         """Drop short hops and corners already passed along the route."""
@@ -373,6 +380,10 @@ class WaypointFollower:
     def _corridor_guard(
         self, x: float, y: float, yaw: float, linear: float, angular: float
     ) -> Tuple[float, float]:
+        if self.global_mode:
+            if in_center_wall_band(x, y) or in_north_racks(x, y) or in_south_east_stub(x, y):
+                return 0.0, 0.0
+            return linear, angular
         if in_east_shelf_stub(x, y):
             west_err = wrap_to_pi(math.pi - float(yaw))
             if math.sin(float(yaw)) > 0.25:
@@ -391,6 +402,14 @@ class WaypointFollower:
                 return 0.0, _clip(self.ang_gain * south_err, self.max_ang)
             return min(self.max_lin, 0.45), _clip(self.ang_gain * south_err, self.max_ang)
         goal_x = self.waypoints[-1][0] if self.waypoints else x
+        if (
+            goal_x < 0.0
+            and float(x) >= EAST_STUB_X_MIN
+            and float(y) >= WEST_LANE_Y - 0.20
+            and math.sin(float(yaw)) > 0.12
+        ):
+            west_err = wrap_to_pi(math.pi - float(yaw))
+            return 0.0, _clip(self.ang_gain * west_err, self.max_ang)
         if (
             goal_x < 0.0
             and 0.12 < float(x) < 0.55
@@ -427,7 +446,7 @@ class WaypointFollower:
                 return max(0.45, min(0.70, linear)), _clip(self.ang_gain * west_err, self.max_ang)
             on_rail = HUG_WEST_X - 0.18 <= float(x) <= HUG_WEST_X + 0.04
             target_x = self.waypoints[self.idx][0] if self.idx < len(self.waypoints) else float(x)
-            if on_rail and abs(target_x - HUG_WEST_X) < 0.20:
+            if on_rail and abs(target_x - HUG_WEST_X) < 0.20 and self.lock_idx < 0:
                 south_err = wrap_to_pi(-math.pi / 2.0 - float(yaw))
                 angular = self._heading_command(south_err)
                 if abs(south_err) > 0.28:

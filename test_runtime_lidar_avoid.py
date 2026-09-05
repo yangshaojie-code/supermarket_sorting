@@ -295,6 +295,97 @@ class LidarAvoidTests(unittest.TestCase):
         side = pick_detour_side(-0.90, -1.00, math.pi, sectors, -1.94)
         self.assertEqual(side, "left")
 
+    def test_yellow_lane_corner_turns_west_without_detours(self):
+        """delivery_20260905_063245 dumped 8 detours at (1.86, 2.22) into the racks."""
+        corridor = CorridorFollower(
+            WaypointFollower(
+                build_delivery_route(start_xy=(1.92, -3.17)),
+                final_yaw=DELIVERY_FACE_YAW,
+                max_lin=2.4,
+                max_ang=1.2,
+            ),
+            blocked_s=0.2,
+        )
+        ranges, amin, inc = _scan(hit=0.88)
+        statuses = []
+        for _ in range(30):
+            linear, angular, done, status = corridor.step(
+                1.86, 2.22, 1.30, ranges, amin, inc, dt=0.1,
+            )
+            self.assertFalse(done)
+            statuses.append(status)
+            self.assertLessEqual(linear, 0.05)
+            self.assertGreater(angular, 0.0)
+        self.assertEqual(corridor.detours, 0)
+        self.assertNotIn("reverse", statuses)
+        self.assertFalse(any(item.startswith("detour") for item in statuses))
+
+    def test_spent_detours_turns_after_reverse_not_nudge(self):
+        """Last west-corridor box: reverse then lin=+1.20 south is a sawtooth."""
+        corridor = CorridorFollower(
+            WaypointFollower(
+                [(HUG_WEST_X, SOUTH_PEEL_Y), DELIVERY_APPROACH_XY],
+                final_yaw=-math.pi / 2.0,
+                max_lin=2.4,
+                max_ang=1.2,
+            ),
+            blocked_s=0.2,
+        )
+        corridor.follower.mode = "drive"
+        corridor.follower.idx = 0
+        corridor.detours = 8
+        statuses = []
+        linears = []
+        x, y = -0.44, -0.53
+        for index in range(50):
+            hit = 0.32 if index < 28 else 0.97
+            if index >= 28:
+                y = -0.58
+            ranges, amin, inc = _scan(hit=hit)
+            linear, _angular, done, status = corridor.step(
+                x, y, -math.pi / 2.0, ranges, amin, inc, dt=0.1,
+            )
+            self.assertFalse(done)
+            statuses.append(status)
+            linears.append(linear)
+        self.assertIn("reverse", statuses)
+        start = statuses.index("reverse")
+        for status, linear in zip(statuses[start:], linears[start:]):
+            self.assertLessEqual(linear, 0.05)
+            self.assertFalse(status == "nudge" and linear > 0.2)
+        self.assertTrue(
+            any(item == "turn" or item.startswith("blocked") for item in statuses[start:])
+        )
+
+    def test_after_turning_off_a_box_drives_when_ahead_is_clear(self):
+        """delivery_20260905_064737: turned west, fwd=1.16, then spun in place."""
+        corridor = CorridorFollower(
+            WaypointFollower(
+                [(HUG_WEST_X, SOUTH_PEEL_Y), DELIVERY_APPROACH_XY],
+                final_yaw=-math.pi / 2.0,
+                max_lin=2.4,
+                max_ang=1.2,
+            ),
+            blocked_s=0.2,
+        )
+        corridor.follower.mode = "drive"
+        close, amin, inc = _scan(hit=0.50)
+        for _ in range(8):
+            corridor.step(-0.44, -0.75, -math.pi / 2.0, close, amin, inc, dt=0.1)
+        self.assertGreaterEqual(corridor.detours, 1)
+        open_ahead, amin, inc = _scan(hit=1.20)
+        linear = 0.0
+        status = "idle"
+        for _ in range(12):
+            linear, _angular, done, status = corridor.step(
+                -0.45, -0.84, -2.85, open_ahead, amin, inc, dt=0.1,
+            )
+            self.assertFalse(done)
+            if linear > 0.20:
+                break
+        self.assertGreater(linear, 0.20)
+        self.assertFalse(status.startswith("blocked"))
+
     def test_same_pose_does_not_stack_detours(self):
         corridor = CorridorFollower(
             WaypointFollower(

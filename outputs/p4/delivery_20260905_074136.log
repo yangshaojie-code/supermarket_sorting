@@ -1,0 +1,121 @@
+p4_delivery: start xy=(0.92,2.39) yaw=1.42 goal=(-1.940,-2.900) stop=0.43 planner=grid max_lin=1.20 max_ang=1.65
+p4_delivery: xy=(0.92,2.39) yaw=1.42 wp=0/17 fwd=0.76 lin=0.00 ang=0.00 replan start plan_id=1 detours=0 plan_ms=538.8
+p4_delivery: xy=(0.92,2.39) yaw=1.57 wp=0/17 fwd=1.03 lin=0.00 ang=0.00 replan off_track plan_id=5 detours=0 plan_ms=342.2
+p4_delivery: xy=(0.93,2.39) yaw=2.08 wp=1/17 fwd=0.76 lin=0.00 ang=1.65 turn plan_id=9 detours=0 plan_ms=328.4
+p4_delivery: xy=(0.93,2.39) yaw=2.59 wp=1/17 fwd=1.40 lin=0.00 ang=1.06 turn plan_id=13 detours=0 plan_ms=301.3
+p4_delivery: xy=(0.93,2.39) yaw=2.85 wp=0/17 fwd=1.40 lin=0.00 ang=0.00 replan off_track plan_id=17 detours=0 plan_ms=322.3
+p4_delivery: xy=(0.93,2.39) yaw=3.04 wp=0/17 fwd=2.21 lin=0.00 ang=0.00 replan off_track plan_id=21 detours=0 plan_ms=312.0
+p4_delivery: xy=(0.90,2.39) yaw=3.14 wp=0/17 fwd=2.18 lin=0.00 ang=0.00 replan off_track plan_id=25 detours=0 plan_ms=320.0
+p4_delivery: xy=(0.77,2.39) yaw=-3.05 wp=1/17 fwd=2.66 lin=0.75 ang=0.12 cruise plan_id=29 detours=0 plan_ms=300.2
+p4_delivery: xy=(0.58,2.36) yaw=-3.01 wp=0/16 fwd=2.51 lin=0.00 ang=0.00 replan off_track plan_id=33 detours=0 plan_ms=284.1
+p4_delivery: xy=(0.36,2.34) yaw=-3.01 wp=0/16 fwd=2.28 lin=0.00 ang=0.00 replan off_track plan_id=37 detours=0 plan_ms=298.2
+p4_delivery: xy=(0.20,2.32) yaw=-3.03 wp=0/17 fwd=2.11 lin=0.00 ang=0.00 replan off_track plan_id=41 detours=0 plan_ms=261.6
+p4_delivery: xy=(0.16,2.31) yaw=-2.94 wp=0/16 fwd=2.06 lin=0.00 ang=0.00 replan path_blocked plan_id=45 detours=0 plan_ms=301.1
+p4_delivery: xy=(0.15,2.31) yaw=-2.74 wp=2/17 fwd=2.05 lin=0.00 ang=0.55 turn plan_id=49 detours=0 plan_ms=287.4
+p4_delivery: xy=(0.15,2.31) yaw=-2.58 wp=0/16 fwd=2.06 lin=0.00 ang=0.00 replan path_blocked plan_id=53 detours=0 plan_ms=276.9
+p4_delivery: xy=(0.10,2.28) yaw=-2.52 wp=0/16 fwd=2.01 lin=0.00 ang=0.00 replan path_blocked plan_id=57 detours=0 plan_ms=275.2
+p4_delivery: xy=(0.06,2.24) yaw=-2.51 wp=0/16 fwd=1.95 lin=0.00 ang=0.00 replan path_blocked plan_id=61 detours=0 plan_ms=289.5
+p4_delivery: xy=(0.01,2.21) yaw=-2.51 wp=0/27 fwd=1.90 lin=0.00 ang=0.00 replan path_blocked plan_id=65 detours=0 plan_ms=275.7
+p4_delivery: xy=(-0.01,2.19) yaw=-2.36 wp=0/25 fwd=1.94 lin=0.00 ang=0.00 replan path_blocked plan_id=69 detours=0 plan_ms=258.6
+p4_delivery: xy=(-0.02,2.19) yaw=-2.10 wp=0/25 fwd=2.21 lin=0.00 ang=0.00 replan path_blocked plan_id=73 detours=0 plan_ms=261.2
+p4_delivery: xy=(-0.02,2.18) yaw=-1.92 wp=0/25 fwd=0.95 lin=0.00 ang=0.00 replan path_blocked plan_id=77 detours=0 plan_ms=263.7
+p4_delivery: xy=(-0.03,2.15) yaw=-1.85 wp=0/25 fwd=0.92 lin=0.00 ang=0.00 replan path_blocked plan_id=81 detours=0 plan_ms=245.9
+p4_delivery: xy=(-0.04,2.10) yaw=-1.85 wp=0/15 fwd=0.86 lin=0.00 ang=0.00 replan path_blocked plan_id=85 detours=0 plan_ms=246.4
+p4_delivery: xy=(-0.04,2.09) yaw=-2.02 wp=0/15 fwd=0.86 lin=0.00 ang=0.00 replan path_blocked plan_id=89 detours=0 plan_ms=267.8
+p4_delivery: xy=(-0.05,2.07) yaw=-2.15 wp=1/15 fwd=2.10 lin=0.57 ang=-0.47 cruise plan_id=93 detours=0 plan_ms=253.5
+p4_delivery: xy=(-0.12,1.99) yaw=-2.30 wp=0/15 fwd=2.01 lin=0.00 ang=0.00 replan path_blocked plan_id=97 detours=0 plan_ms=270.1
+p4_delivery: xy=(-0.27,1.84) yaw=-2.38 wp=0/14 fwd=1.70 lin=0.00 ang=0.00 replan off_track plan_id=101 detours=0 plan_ms=248.0
+p4_delivery: xy=(-0.37,1.75) yaw=-2.38 wp=0/13 fwd=1.83 lin=0.00 ang=0.00 replan path_blocked plan_id=105 detours=0 plan_ms=253.8
+p4_delivery: xy=(-0.42,1.69) yaw=-2.30 wp=0/13 fwd=1.70 lin=0.00 ang=0.00 replan off_track plan_id=109 detours=0 plan_ms=288.8
+p4_delivery: xy=(-0.47,1.63) yaw=-2.26 wp=0/13 fwd=1.61 lin=0.00 ang=0.00 replan off_track plan_id=113 detours=0 plan_ms=283.7
+p4_delivery: xy=(-0.50,1.59) yaw=-2.09 wp=0/14 fwd=1.51 lin=0.00 ang=0.00 replan path_blocked plan_id=117 detours=0 plan_ms=250.9
+p4_delivery: xy=(-0.50,1.59) yaw=-1.89 wp=0/14 fwd=1.50 lin=0.00 ang=0.00 replan path_blocked plan_id=121 detours=0 plan_ms=271.6
+p4_delivery: xy=(-0.51,1.56) yaw=-1.77 wp=0/14 fwd=1.46 lin=0.00 ang=0.00 replan path_blocked plan_id=125 detours=0 plan_ms=262.5
+p4_delivery: xy=(-0.53,1.41) yaw=-1.67 wp=0/12 fwd=1.34 lin=0.00 ang=0.00 replan path_blocked plan_id=129 detours=0 plan_ms=274.3
+p4_delivery: xy=(-0.54,1.24) yaw=-1.65 wp=0/12 fwd=1.16 lin=0.00 ang=0.00 replan path_blocked plan_id=133 detours=0 plan_ms=242.8
+p4_delivery: xy=(-0.56,1.14) yaw=-1.73 wp=0/12 fwd=1.05 lin=0.00 ang=0.00 replan path_blocked plan_id=137 detours=0 plan_ms=250.5
+p4_delivery: xy=(-0.57,1.07) yaw=-1.71 wp=0/11 fwd=0.98 lin=0.00 ang=0.00 replan off_track plan_id=141 detours=0 plan_ms=232.2
+p4_delivery: xy=(-0.57,1.00) yaw=-1.66 wp=0/11 fwd=0.91 lin=0.00 ang=0.00 replan off_track plan_id=145 detours=0 plan_ms=242.3
+p4_delivery: xy=(-0.58,0.93) yaw=-1.67 wp=0/13 fwd=0.84 lin=0.00 ang=0.00 replan off_track plan_id=149 detours=0 plan_ms=249.8
+p4_delivery: xy=(-0.58,0.91) yaw=-1.89 wp=0/13 fwd=0.82 lin=0.00 ang=0.00 replan off_track plan_id=153 detours=0 plan_ms=238.7
+p4_delivery: xy=(-0.58,0.91) yaw=-2.07 wp=0/13 fwd=0.82 lin=0.00 ang=0.00 replan off_track plan_id=157 detours=0 plan_ms=258.9
+p4_delivery: xy=(-0.60,0.89) yaw=-2.19 wp=0/13 fwd=0.81 lin=0.00 ang=0.00 replan off_track plan_id=161 detours=0 plan_ms=242.3
+p4_delivery: xy=(-0.63,0.84) yaw=-2.26 wp=0/13 fwd=0.79 lin=0.00 ang=0.00 replan off_track plan_id=165 detours=0 plan_ms=242.6
+p4_delivery: xy=(-0.67,0.79) yaw=-2.30 wp=0/13 fwd=0.75 lin=0.00 ang=0.00 replan off_track plan_id=169 detours=0 plan_ms=232.5
+p4_delivery: xy=(-0.72,0.75) yaw=-2.37 wp=0/13 fwd=0.72 lin=0.00 ang=0.00 replan off_track plan_id=173 detours=0 plan_ms=261.5
+p4_delivery: xy=(-0.73,0.74) yaw=-2.59 wp=0/13 fwd=0.81 lin=0.00 ang=0.00 replan off_track plan_id=177 detours=0 plan_ms=267.0
+p4_delivery: xy=(-0.73,0.74) yaw=-2.74 wp=0/13 fwd=1.64 lin=0.00 ang=0.00 replan off_track plan_id=181 detours=0 plan_ms=244.9
+p4_delivery: xy=(-0.73,0.74) yaw=-2.87 wp=0/13 fwd=1.63 lin=0.00 ang=0.00 replan off_track plan_id=185 detours=0 plan_ms=254.0
+p4_delivery: xy=(-0.77,0.73) yaw=-2.94 wp=0/13 fwd=1.60 lin=0.00 ang=0.00 replan off_track plan_id=189 detours=0 plan_ms=254.6
+p4_delivery: xy=(-0.88,0.71) yaw=-3.03 wp=0/12 fwd=1.50 lin=0.00 ang=0.00 replan off_track plan_id=193 detours=0 plan_ms=242.3
+p4_delivery: xy=(-1.06,0.70) yaw=-3.08 wp=0/12 fwd=1.29 lin=0.00 ang=0.00 replan off_track plan_id=197 detours=0 plan_ms=240.8
+p4_delivery: xy=(-1.33,0.68) yaw=-3.07 wp=2/11 fwd=1.02 lin=0.00 ang=0.57 turn plan_id=201 detours=0 plan_ms=188.6
+p4_delivery: xy=(-1.47,0.67) yaw=-3.00 wp=0/10 fwd=0.90 lin=0.00 ang=0.00 replan path_blocked plan_id=205 detours=0 plan_ms=195.4
+p4_delivery: xy=(-1.50,0.66) yaw=-2.64 wp=0/2 fwd=0.87 lin=0.00 ang=1.65 turn plan_id=207 detours=0 plan_ms=147.8
+p4_delivery: xy=(-1.50,0.66) yaw=-2.15 wp=0/2 fwd=1.07 lin=0.00 ang=0.00 replan fallback plan_id=211 detours=0 plan_ms=155.8
+p4_delivery: xy=(-1.50,0.66) yaw=-1.79 wp=0/2 fwd=1.48 lin=-0.24 ang=0.00 recover_reverse plan_id=212 detours=0 plan_ms=142.1
+p4_delivery: xy=(-1.50,0.67) yaw=-1.56 wp=0/2 fwd=0.57 lin=0.00 ang=0.00 blocked_no_path plan_id=212 detours=0 plan_ms=142.1
+p4_delivery: xy=(-1.50,0.64) yaw=-1.44 wp=0/2 fwd=0.55 lin=0.00 ang=0.00 blocked_no_path plan_id=212 detours=0 plan_ms=159.8
+p4_delivery: xy=(-1.48,0.56) yaw=-1.32 wp=0/2 fwd=0.46 lin=0.00 ang=0.00 blocked_no_path plan_id=212 detours=0 plan_ms=153.2
+p4_delivery: xy=(-1.47,0.54) yaw=-1.29 wp=0/2 fwd=0.43 lin=0.00 ang=0.00 blocked_no_path plan_id=212 detours=0 plan_ms=153.2
+p4_delivery: xy=(-1.47,0.54) yaw=-1.28 wp=0/2 fwd=0.43 lin=0.00 ang=0.00 blocked_no_path plan_id=212 detours=0 plan_ms=172.1
+p4_delivery: xy=(-1.47,0.54) yaw=-1.28 wp=0/2 fwd=0.43 lin=0.00 ang=0.00 blocked_no_path plan_id=212 detours=0 plan_ms=160.7
+p4_delivery: xy=(-1.48,0.54) yaw=-1.28 wp=0/2 fwd=0.44 lin=0.00 ang=0.00 blocked_no_path plan_id=212 detours=0 plan_ms=162.4
+p4_delivery: xy=(-1.48,0.54) yaw=-1.28 wp=0/2 fwd=0.44 lin=0.00 ang=0.00 blocked_no_path plan_id=212 detours=0 plan_ms=167.0
+p4_delivery: xy=(-1.48,0.54) yaw=-1.28 wp=0/2 fwd=0.44 lin=0.00 ang=0.00 blocked_no_path plan_id=212 detours=0 plan_ms=167.1
+p4_delivery: xy=(-1.48,0.54) yaw=-1.28 wp=0/2 fwd=0.44 lin=0.00 ang=0.00 blocked_no_path plan_id=212 detours=0 plan_ms=144.8
+p4_delivery: xy=(-1.48,0.55) yaw=-1.28 wp=0/2 fwd=0.44 lin=0.00 ang=0.00 blocked_no_path plan_id=212 detours=0 plan_ms=133.3
+p4_delivery: xy=(-1.48,0.54) yaw=-1.28 wp=0/2 fwd=0.44 lin=0.00 ang=0.00 blocked_no_path plan_id=212 detours=0 plan_ms=141.8
+p4_delivery: xy=(-1.48,0.54) yaw=-1.28 wp=0/2 fwd=0.44 lin=0.00 ang=0.00 blocked_no_path plan_id=212 detours=0 plan_ms=140.3
+p4_delivery: xy=(-1.48,0.55) yaw=-1.28 wp=0/2 fwd=0.44 lin=0.00 ang=0.00 blocked_no_path plan_id=212 detours=0 plan_ms=139.9
+p4_delivery: xy=(-1.48,0.54) yaw=-1.28 wp=0/2 fwd=0.44 lin=0.00 ang=0.00 blocked_no_path plan_id=212 detours=0 plan_ms=154.0
+p4_delivery: xy=(-1.48,0.54) yaw=-1.28 wp=0/2 fwd=0.44 lin=0.00 ang=0.00 blocked_no_path plan_id=212 detours=0 plan_ms=137.7
+p4_delivery: xy=(-1.48,0.54) yaw=-1.28 wp=0/2 fwd=0.44 lin=0.00 ang=0.00 blocked_no_path plan_id=212 detours=0 plan_ms=144.2
+p4_delivery: xy=(-1.48,0.55) yaw=-1.28 wp=0/2 fwd=0.45 lin=0.00 ang=0.00 blocked_no_path plan_id=212 detours=0 plan_ms=138.4
+p4_delivery: xy=(-1.48,0.54) yaw=-1.28 wp=0/2 fwd=0.44 lin=0.00 ang=0.00 blocked_no_path plan_id=212 detours=0 plan_ms=141.8
+
+{
+  "arrived": false,
+  "goal": "delivery",
+  "in_zone": false,
+  "in_picking_zone": false,
+  "in_delivery_base": false,
+  "odom_xy": [
+    -1.477,
+    0.546
+  ],
+  "yaw": -1.284,
+  "head_joints": {
+    "slide": 0.11606769708841762,
+    "head_yaw": 0.00637650580825107,
+    "head_pitch": -0.11601077896014123
+  },
+  "goal_xy": [
+    -1.94,
+    -2.9
+  ],
+  "route": [
+    [
+      -0.4,
+      -2.7
+    ],
+    [
+      -1.94,
+      -2.9
+    ]
+  ],
+  "elapsed_s": 150.43,
+  "status": "safety_slow",
+  "detours": 0,
+  "plan_id": 212,
+  "plan_reason": "path_blocked",
+  "speed_scale": 4.0,
+  "max_lin": 1.2,
+  "max_ang": 1.65,
+  "stop_dist": 0.43,
+  "slow_dist": null,
+  "blocked_by_scan": true,
+  "log_json": "/workspace/baseline/outputs/p4/delivery_20260905_074136.json",
+  "log_txt": "/workspace/baseline/outputs/p4/delivery_20260905_074136.log"
+}
+p4 log: /workspace/baseline/outputs/p4/delivery_20260905_074136.log

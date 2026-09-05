@@ -1,0 +1,112 @@
+p4_shelf: start xy=(1.92,-3.17) yaw=1.57 goal=(0.852,2.475) stop=0.43 planner=grid max_lin=1.20 max_ang=1.65
+p4_shelf: xy=(1.92,-3.17) yaw=1.57 wp=0/15 fwd=1.43 lin=0.00 ang=0.00 replan start plan_id=1 detours=0 plan_ms=119.6
+p4_shelf: xy=(1.92,-3.14) yaw=1.57 wp=1/15 fwd=1.42 lin=0.83 ang=0.00 cruise plan_id=5 detours=0 plan_ms=111.8
+p4_shelf: xy=(1.92,-3.02) yaw=1.56 wp=0/15 fwd=1.39 lin=0.00 ang=0.00 replan off_track plan_id=9 detours=0 plan_ms=113.8
+p4_shelf: xy=(1.92,-2.86) yaw=1.56 wp=0/15 fwd=1.38 lin=0.00 ang=0.00 replan off_track plan_id=13 detours=0 plan_ms=116.3
+p4_shelf: xy=(1.93,-2.67) yaw=1.56 wp=0/14 fwd=1.37 lin=0.00 ang=0.00 replan off_track plan_id=17 detours=0 plan_ms=113.9
+p4_shelf: xy=(1.93,-2.46) yaw=1.56 wp=0/14 fwd=1.36 lin=0.00 ang=0.00 replan off_track plan_id=21 detours=0 plan_ms=129.6
+p4_shelf: xy=(1.93,-2.20) yaw=1.56 wp=0/13 fwd=1.36 lin=0.00 ang=0.00 replan off_track plan_id=25 detours=0 plan_ms=122.4
+p4_shelf: xy=(1.93,-2.01) yaw=1.56 wp=0/13 fwd=1.37 lin=0.00 ang=0.00 replan off_track plan_id=29 detours=0 plan_ms=116.8
+p4_shelf: xy=(1.93,-1.85) yaw=1.57 wp=0/12 fwd=1.37 lin=0.00 ang=0.00 replan off_track plan_id=33 detours=0 plan_ms=115.1
+p4_shelf: xy=(1.94,-1.67) yaw=1.57 wp=0/12 fwd=1.37 lin=0.00 ang=0.00 replan off_track plan_id=37 detours=0 plan_ms=146.0
+p4_shelf: xy=(1.94,-1.51) yaw=1.57 wp=0/12 fwd=1.37 lin=0.00 ang=0.00 replan off_track plan_id=41 detours=0 plan_ms=128.0
+p4_shelf: xy=(1.94,-1.30) yaw=1.57 wp=1/11 fwd=1.37 lin=0.76 ang=0.00 cruise plan_id=45 detours=0 plan_ms=115.3
+p4_shelf: xy=(1.94,-1.11) yaw=1.57 wp=0/11 fwd=1.38 lin=0.00 ang=0.00 replan off_track plan_id=49 detours=0 plan_ms=134.4
+p4_shelf: xy=(1.94,-0.95) yaw=1.57 wp=0/10 fwd=1.38 lin=0.00 ang=0.00 replan off_track plan_id=53 detours=0 plan_ms=118.2
+p4_shelf: xy=(1.94,-0.77) yaw=1.57 wp=0/10 fwd=1.38 lin=0.00 ang=0.00 replan off_track plan_id=57 detours=0 plan_ms=125.6
+p4_shelf: xy=(1.94,-0.58) yaw=1.57 wp=0/10 fwd=1.38 lin=0.00 ang=0.00 replan off_track plan_id=61 detours=0 plan_ms=122.6
+p4_shelf: xy=(1.94,-0.39) yaw=1.57 wp=0/9 fwd=1.37 lin=0.00 ang=0.00 replan off_track plan_id=65 detours=0 plan_ms=116.3
+p4_shelf: xy=(1.94,-0.20) yaw=1.57 wp=0/9 fwd=1.38 lin=0.00 ang=0.00 replan off_track plan_id=69 detours=0 plan_ms=114.5
+p4_shelf: xy=(1.94,0.02) yaw=1.57 wp=0/8 fwd=1.39 lin=0.00 ang=0.00 replan off_track plan_id=73 detours=0 plan_ms=102.8
+p4_shelf: xy=(1.94,0.20) yaw=1.57 wp=0/8 fwd=1.39 lin=0.00 ang=0.00 replan off_track plan_id=77 detours=0 plan_ms=100.8
+p4_shelf: xy=(1.94,0.41) yaw=1.57 wp=0/7 fwd=1.39 lin=0.00 ang=0.00 replan off_track plan_id=81 detours=0 plan_ms=87.3
+p4_shelf: xy=(1.94,0.59) yaw=1.57 wp=0/7 fwd=1.39 lin=0.00 ang=0.00 replan off_track plan_id=85 detours=0 plan_ms=85.0
+p4_shelf: xy=(1.94,0.78) yaw=1.57 wp=0/6 fwd=1.39 lin=0.00 ang=0.00 replan off_track plan_id=89 detours=0 plan_ms=83.9
+p4_shelf: xy=(1.94,0.96) yaw=1.57 wp=0/6 fwd=1.39 lin=0.00 ang=0.00 replan off_track plan_id=93 detours=0 plan_ms=76.7
+p4_shelf: xy=(1.94,1.14) yaw=1.57 wp=0/6 fwd=1.39 lin=0.00 ang=0.00 replan off_track plan_id=97 detours=0 plan_ms=66.8
+p4_shelf: xy=(1.94,1.35) yaw=1.57 wp=0/5 fwd=1.39 lin=0.00 ang=0.00 replan off_track plan_id=101 detours=0 plan_ms=62.5
+p4_shelf: xy=(1.94,1.50) yaw=1.57 wp=0/5 fwd=1.39 lin=0.00 ang=0.00 replan off_track plan_id=105 detours=0 plan_ms=64.0
+p4_shelf: xy=(1.94,1.56) yaw=1.68 wp=0/5 fwd=1.51 lin=0.00 ang=0.00 replan off_track plan_id=109 detours=0 plan_ms=56.0
+p4_shelf: xy=(1.94,1.57) yaw=1.89 wp=0/5 fwd=1.57 lin=0.00 ang=0.00 replan off_track plan_id=113 detours=0 plan_ms=58.6
+p4_shelf: xy=(1.94,1.57) yaw=2.06 wp=0/5 fwd=1.56 lin=0.00 ang=0.00 replan off_track plan_id=117 detours=0 plan_ms=49.2
+p4_shelf: xy=(1.92,1.60) yaw=2.15 wp=0/5 fwd=1.54 lin=0.00 ang=0.00 replan off_track plan_id=121 detours=0 plan_ms=48.7
+p4_shelf: xy=(1.88,1.65) yaw=2.19 wp=0/4 fwd=1.48 lin=0.00 ang=0.00 replan off_track plan_id=125 detours=0 plan_ms=44.4
+p4_shelf: xy=(1.83,1.72) yaw=2.17 wp=0/5 fwd=1.40 lin=0.00 ang=0.00 replan off_track plan_id=129 detours=0 plan_ms=42.2
+p4_shelf: xy=(1.78,1.79) yaw=2.18 wp=0/4 fwd=1.32 lin=0.00 ang=0.00 replan off_track plan_id=133 detours=0 plan_ms=41.2
+p4_shelf: xy=(1.73,1.87) yaw=2.16 wp=0/6 fwd=1.22 lin=0.00 ang=0.00 replan path_blocked plan_id=137 detours=0 plan_ms=33.6
+p4_shelf: xy=(1.69,1.92) yaw=2.18 wp=0/6 fwd=1.17 lin=0.00 ang=0.00 replan path_blocked plan_id=141 detours=0 plan_ms=34.1
+p4_shelf: xy=(1.68,1.94) yaw=2.31 wp=0/6 fwd=1.58 lin=0.00 ang=0.00 replan path_blocked plan_id=145 detours=0 plan_ms=33.8
+p4_shelf: xy=(1.68,1.94) yaw=2.48 wp=0/6 fwd=1.57 lin=0.00 ang=0.00 replan path_blocked plan_id=149 detours=0 plan_ms=33.2
+p4_shelf: xy=(1.67,1.95) yaw=2.58 wp=3/6 fwd=1.57 lin=0.27 ang=0.18 cruise plan_id=152 detours=0 plan_ms=44.3
+p4_shelf: xy=(1.65,1.96) yaw=2.56 wp=1/4 fwd=1.54 lin=0.00 ang=-0.49 turn plan_id=156 detours=0 plan_ms=31.1
+p4_shelf: xy=(1.64,1.97) yaw=2.46 wp=1/4 fwd=1.53 lin=0.19 ang=-0.47 cruise plan_id=160 detours=0 plan_ms=45.5
+p4_shelf: xy=(1.61,1.99) yaw=2.35 wp=1/4 fwd=1.50 lin=0.25 ang=-0.33 cruise plan_id=164 detours=0 plan_ms=32.9
+p4_shelf: xy=(1.57,2.04) yaw=2.29 wp=1/4 fwd=1.44 lin=0.30 ang=0.00 cruise plan_id=168 detours=0 plan_ms=24.5
+p4_shelf: xy=(1.53,2.09) yaw=2.29 wp=1/4 fwd=1.38 lin=0.30 ang=0.12 cruise plan_id=172 detours=0 plan_ms=18.9
+p4_shelf: xy=(1.49,2.13) yaw=2.31 wp=2/4 fwd=1.32 lin=0.00 ang=1.21 turn plan_id=176 detours=0 plan_ms=18.9
+p4_shelf: xy=(1.47,2.16) yaw=2.44 wp=2/4 fwd=1.27 lin=0.00 ang=1.01 turn plan_id=180 detours=0 plan_ms=16.2
+p4_shelf: xy=(1.46,2.16) yaw=2.65 wp=2/4 fwd=1.27 lin=0.00 ang=0.71 turn plan_id=184 detours=0 plan_ms=15.9
+p4_shelf: xy=(1.46,2.16) yaw=2.82 wp=2/4 fwd=1.98 lin=0.00 ang=0.47 turn plan_id=188 detours=0 plan_ms=15.6
+p4_shelf: xy=(1.45,2.16) yaw=2.92 wp=2/4 fwd=1.97 lin=0.26 ang=0.14 cruise plan_id=192 detours=0 plan_ms=11.9
+p4_shelf: xy=(1.40,2.17) yaw=2.96 wp=2/4 fwd=1.93 lin=0.27 ang=0.08 cruise plan_id=196 detours=0 plan_ms=15.0
+p4_shelf: xy=(1.34,2.18) yaw=2.98 wp=2/3 fwd=1.86 lin=0.73 ang=-0.37 cruise plan_id=200 detours=0 plan_ms=9.2
+p4_shelf: xy=(1.26,2.20) yaw=2.99 wp=2/3 fwd=1.81 lin=0.62 ang=-0.38 cruise plan_id=204 detours=0 plan_ms=9.5
+p4_shelf: xy=(1.14,2.22) yaw=2.90 wp=2/3 fwd=1.70 lin=0.36 ang=-0.51 cruise plan_id=208 detours=0 plan_ms=8.2
+p4_shelf: xy=(1.09,2.23) yaw=2.75 wp=2/3 fwd=1.63 lin=0.00 ang=-0.89 turn plan_id=210 detours=0 plan_ms=6.3
+p4_shelf: xy=(1.08,2.24) yaw=2.52 wp=2/3 fwd=1.62 lin=0.00 ang=-0.56 turn plan_id=210 detours=0 plan_ms=6.3
+p4_shelf: xy=(1.07,2.25) yaw=2.37 wp=2/3 fwd=0.96 lin=0.30 ang=-0.23 cruise plan_id=211 detours=0 plan_ms=5.5
+p4_shelf: xy=(1.02,2.29) yaw=2.34 wp=1/2 fwd=0.90 lin=0.37 ang=0.00 cruise plan_id=215 detours=0 plan_ms=3.4
+p4_shelf: xy=(0.96,2.36) yaw=2.33 wp=0/2 fwd=0.81 lin=0.00 ang=0.00 replan stuck plan_id=218 detours=0 plan_ms=1.7
+p4_shelf: xy=(0.93,2.39) yaw=2.40 wp=1/2 fwd=0.77 lin=0.10 ang=0.32 cruise plan_id=218 detours=0 plan_ms=1.7
+p4_shelf: xy=(0.93,2.39) yaw=2.27 wp=2/2 fwd=0.76 lin=0.00 ang=-1.29 turn plan_id=219 detours=0 plan_ms=0.3
+p4_shelf: xy=(0.92,2.39) yaw=1.92 wp=2/2 fwd=0.76 lin=0.00 ang=-0.79 turn plan_id=219 detours=0 plan_ms=0.3
+p4_shelf: xy=(0.92,2.39) yaw=1.71 wp=2/2 fwd=1.03 lin=0.00 ang=-0.47 turn plan_id=219 detours=0 plan_ms=0.3
+p4_shelf: xy=(0.92,2.39) yaw=1.56 wp=2/2 fwd=1.05 lin=0.00 ang=-0.26 turn plan_id=219 detours=0 plan_ms=0.3
+p4_shelf: xy=(0.92,2.39) yaw=1.48 wp=2/2 fwd=1.03 lin=0.00 ang=-0.14 turn plan_id=219 detours=0 plan_ms=0.3
+p4_shelf: xy=(0.92,2.39) yaw=1.43 wp=2/2 fwd=0.78 lin=0.00 ang=-0.08 turn plan_id=219 detours=0 plan_ms=0.3
+
+{
+  "arrived": true,
+  "goal": "shelf",
+  "in_zone": true,
+  "in_picking_zone": true,
+  "in_delivery_base": false,
+  "odom_xy": [
+    0.925,
+    2.394
+  ],
+  "yaw": 1.428,
+  "head_joints": {
+    "slide": 0.11606275946041385,
+    "head_yaw": 0.0013063942621317905,
+    "head_pitch": -0.11629775639241946
+  },
+  "goal_xy": [
+    0.852,
+    2.475
+  ],
+  "route": [
+    [
+      0.9,
+      2.4
+    ],
+    [
+      0.852,
+      2.475
+    ]
+  ],
+  "elapsed_s": 131.92,
+  "status": "arrived",
+  "detours": 0,
+  "plan_id": 219,
+  "plan_reason": "stuck",
+  "speed_scale": 4.0,
+  "max_lin": 1.2,
+  "max_ang": 1.65,
+  "stop_dist": 0.43,
+  "slow_dist": null,
+  "blocked_by_scan": false,
+  "log_json": "/workspace/baseline/outputs/p4/shelf_20260905_073851.json",
+  "log_txt": "/workspace/baseline/outputs/p4/shelf_20260905_073851.log"
+}
+p4 log: /workspace/baseline/outputs/p4/shelf_20260905_073851.log

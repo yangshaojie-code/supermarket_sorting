@@ -15,6 +15,7 @@ from runtime.scene_zones import (
 )
 from runtime.waypoint_nav import (
     WaypointFollower,
+    build_delivery_route,
     build_shelf_route,
     min_forward_range,
     pose_from_odom,
@@ -368,6 +369,21 @@ class WaypointNavTests(unittest.TestCase):
         linear, angular, done = follower.step(1.90, WEST_LANE_Y + 0.04, math.pi / 2.0)
         self.assertFalse(done)
         self.assertGreaterEqual(follower.idx, 1)
+        self.assertGreater(angular, 0.0)
+
+    def test_delivery_corner_skips_east_lane_and_turns_west(self):
+        follower = WaypointFollower(
+            build_delivery_route(start_xy=(1.92, -3.17)),
+            final_yaw=DELIVERY_FACE_YAW,
+            max_lin=2.4,
+            max_ang=1.2,
+            pos_tol=0.12,
+        )
+        follower.mode = "drive"
+        linear, angular, done = follower.step(1.86, 2.22, 1.30)
+        self.assertFalse(done)
+        self.assertGreaterEqual(follower.idx, 1)
+        self.assertEqual(linear, 0.0)
         self.assertGreater(angular, 0.0)
 
     def test_does_not_westbound_south_of_the_yellow_lane(self):

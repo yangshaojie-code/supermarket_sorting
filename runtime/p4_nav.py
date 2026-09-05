@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""P4 corridor nav: odom waypoints + lidar detours. No occupancy map.
-
-Goes picking aisle ↔ delivery approach through ``RosRobotController``.
-"""
+"""P4 corridor nav: grid A* + lidar brake. No occupancy ROS stack."""
 
 from __future__ import annotations
 
@@ -14,7 +11,8 @@ from datetime import datetime
 from pathlib import Path
 
 from runtime.head_camera_kinematics import AISLE_SCAN_HEAD, AISLE_SCAN_SPINE
-from runtime.lidar_avoid import CorridorFollower, scan_sectors_from_msg
+from runtime.grid_planner import STOP_DIST, GridNavController
+from runtime.lidar_avoid import scan_sectors_from_msg
 from runtime.ros_contract import JOINT_STATES_TOPIC, ODOM_TOPIC, SCAN_TOPIC
 from runtime.ros_robot_control import RosRobotController
 from runtime.ros_sensor_utils import SensorCache
@@ -26,18 +24,12 @@ from runtime.scene_zones import (
     in_delivery_base,
     in_picking_zone,
 )
-from runtime.waypoint_nav import (
-    WaypointFollower,
-    build_delivery_route,
-    build_shelf_route,
-    pose_from_odom,
-    prune_passed_waypoints,
-)
+from runtime.waypoint_nav import build_delivery_route, build_shelf_route, pose_from_odom
 
 RATE_HZ = 20.0
 BASE_LIN = 0.30
 BASE_ANG = 0.55
-SPEED_SCALE = 8.0
+SPEED_SCALE = 4.0
 MAX_ANG_CAP = 1.65
 HEAD_SETTLE_S = 1.0
 DEFAULT_TIMEOUT_S = 150.0
@@ -146,7 +138,7 @@ def navigate(
     old_err = sys.stderr
     sys.stderr = _Tee(old_err, log_file)
 
-    corridor = None
+    nav = None
     arrived = False
     x = y = yaw = 0.0
     last_log = 0.0
@@ -158,26 +150,17 @@ def navigate(
         for _ in range(20):
             rclpy_mod.spin_once(node, timeout_sec=0.05)
         x, y, yaw = pose_from_odom(sensors.odom)
-        if spec["name"] == "delivery":
-            route = prune_passed_waypoints(
-                build_delivery_route(spec["route"][-1], start_xy=(x, y)), x, y
-            )
-        else:
-            route = prune_passed_waypoints(spec["route"], x, y)
-        spec["route"] = route
-        corridor = CorridorFollower(
-            WaypointFollower(
-                route,
-                final_yaw=spec["yaw"],
-                max_lin=max_lin,
-                max_ang=max_ang,
-                pos_tol=0.12,
-            )
+        goal_xy = spec["route"][-1]
+        nav = GridNavController(
+            goal_xy=(float(goal_xy[0]), float(goal_xy[1])),
+            final_yaw=spec["yaw"],
+            max_lin=max_lin,
+            max_ang=max_ang,
         )
         print(
             f"p4_{spec['name']}: start xy=({x:.2f},{y:.2f}) yaw={yaw:.2f} "
-            f"route={[ (round(px, 3), round(py, 3)) for px, py in route ]} "
-            f"stop={corridor.stop_dist:.2f} slow={corridor.slow_dist:.2f} "
+            f"goal=({goal_xy[0]:.3f},{goal_xy[1]:.3f}) "
+            f"stop={STOP_DIST:.2f} planner=grid "
             f"max_lin={max_lin:.2f} max_ang={max_ang:.2f}",
             file=sys.stderr,
         )
@@ -195,8 +178,8 @@ def navigate(
                 ranges = scan.ranges
                 angle_min = float(scan.angle_min)
                 angle_inc = float(scan.angle_increment)
-            linear, angular, arrived, last_status = corridor.step(
-                x, y, yaw, ranges, angle_min, angle_inc, dt=period,
+            linear, angular, arrived, last_status = nav.step(
+                x, y, yaw, ranges, angle_min, angle_inc, dt=period, now=time.monotonic() - start,
             )
             if spec["aim_head"]:
                 controller.command_spine(AISLE_SCAN_SPINE)
@@ -205,11 +188,16 @@ def navigate(
             if time.monotonic() - last_log >= 2.0:
                 sectors = scan_sectors_from_msg(scan)
                 fwd = sectors.forward if sectors is not None else float("inf")
+                wp = 0
+                nwp = 0
+                if nav.follower is not None:
+                    wp = nav.follower.idx
+                    nwp = len(nav.follower.waypoints)
                 print(
                     f"p4_{spec['name']}: xy=({x:.2f},{y:.2f}) yaw={yaw:.2f} "
-                    f"wp={corridor.follower.idx}/{len(corridor.follower.waypoints)} "
-                    f"fwd={fwd:.2f} lin={linear:.2f} ang={angular:.2f} "
-                    f"{last_status} detours={corridor.detours}",
+                    f"wp={wp}/{nwp} fwd={fwd:.2f} lin={linear:.2f} ang={angular:.2f} "
+                    f"{last_status} plan_id={nav.plan_id} detours=0 "
+                    f"plan_ms={nav.last_plan_ms:.1f}",
                     file=sys.stderr,
                 )
                 last_log = time.monotonic()
@@ -235,16 +223,22 @@ def navigate(
             "yaw": round(yaw, 3),
             "head_joints": _head_joints(sensors),
             "goal_xy": [float(spec["route"][-1][0]), float(spec["route"][-1][1])],
-            "route": [[round(px, 3), round(py, 3)] for px, py in spec["route"]],
+            "route": (
+                [[round(px, 3), round(py, 3)] for px, py in nav.follower.waypoints]
+                if nav is not None and nav.follower is not None
+                else [[round(px, 3), round(py, 3)] for px, py in spec["route"]]
+            ),
             "elapsed_s": round(time.monotonic() - start, 2),
             "status": last_status,
-            "detours": int(corridor.detours) if corridor is not None else 0,
+            "detours": 0,
+            "plan_id": int(nav.plan_id) if nav is not None else 0,
+            "plan_reason": nav.last_plan_reason if nav is not None else "",
             "speed_scale": scale,
             "max_lin": round(max_lin, 3),
             "max_ang": round(max_ang, 3),
-            "stop_dist": round(corridor.stop_dist, 3) if corridor is not None else None,
-            "slow_dist": round(corridor.slow_dist, 3) if corridor is not None else None,
-            "blocked_by_scan": last_status.startswith("blocked") or last_status.startswith("detour"),
+            "stop_dist": STOP_DIST,
+            "slow_dist": None,
+            "blocked_by_scan": last_status.startswith("safety") or last_status.startswith("blocked"),
             "log_json": str(json_path),
             "log_txt": str(log_path),
         }

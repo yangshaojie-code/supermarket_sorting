@@ -106,6 +106,52 @@ def scan_sectors_from_msg(scan) -> Optional[ScanSectors]:
     )
 
 
+def clear_horizon_m(stop_dist: float, max_lin: float, clear_s: float = 0.30) -> float:
+    """How far ahead must be empty before we treat the cone as clear."""
+    return float(stop_dist) + abs(float(max_lin)) * float(clear_s)
+
+
+def occlusion_kind(
+    sectors: ScanSectors,
+    span: float,
+    stop_dist: float,
+    clear_horizon: float,
+    jam_extra: float = 0.10,
+) -> str:
+    """clear / nudge (steer while driving) / approach (keep speed) / block (stop-turn)."""
+    ahead = sectors.ahead if math.isfinite(sectors.ahead) else 8.0
+    if ahead > float(clear_horizon):
+        return "clear"
+    left_f = sectors.left_front if math.isfinite(sectors.left_front) else 8.0
+    right_f = sectors.right_front if math.isfinite(sectors.right_front) else 8.0
+    side_open = left_f > 0.80 or right_f > 0.80
+    small = float(span) <= 0.32
+    far = ahead > 0.90
+    if side_open and (small or far):
+        return "nudge"
+    if ahead > float(stop_dist) + float(jam_extra):
+        return "approach"
+    return "block"
+
+
+def safety_gate(
+    linear: float,
+    angular: float,
+    ranges: Sequence[float],
+    angle_min: float,
+    angle_increment: float,
+    stop_dist: float = 0.43,
+) -> Tuple[float, float, str]:
+    """Production brake only. Does not steer, insert detours, or rewrite the route."""
+    ahead = min_forward_range(ranges, angle_min, angle_increment, cone_half=0.22)
+    if math.isfinite(ahead) and ahead <= float(stop_dist):
+        return 0.0, float(angular), "safety_stop"
+    if math.isfinite(ahead) and ahead < float(stop_dist) + 0.25 and linear > 0.04:
+        horizon = max(0.0, ahead - float(stop_dist))
+        return min(float(linear), horizon / 0.25), float(angular), "safety_slow"
+    return float(linear), float(angular), "ok"
+
+
 def clip_to_nav_bounds(x: float, y: float, bounds=NAV_BOUNDS) -> Tuple[float, float]:
     return (
         min(bounds["x"][1], max(bounds["x"][0], float(x))),
@@ -199,6 +245,12 @@ class CorridorFollower:
     _ahead_cone: float = field(init=False, default=0.22)
     _detour_at: Optional[Tuple[float, float]] = field(init=False, default=None)
     _jam_latch: bool = field(init=False, default=False)
+    _jam_yaw: float = field(init=False, default=0.0)
+    _held_side: Optional[str] = field(init=False, default=None)
+    _must_turn: float = field(init=False, default=0.0)
+    _after_turn: float = field(init=False, default=0.55)
+    _hold_jam: bool = field(init=False, default=False)
+    _reverse_yaw: float = field(init=False, default=0.0)
     detours: int = field(init=False, default=0)
     last_status: str = field(init=False, default="idle")
 
@@ -216,23 +268,12 @@ class CorridorFollower:
         self._avoid_ang = min(1.05, max(0.45, 0.55 * abs(self.follower.max_ang)))
 
     def _clear_horizon(self) -> float:
-        return self.stop_dist + abs(self.follower.max_lin) * self._clear_s
+        return clear_horizon_m(self.stop_dist, self.follower.max_lin, self._clear_s)
 
     def _occlusion_kind(self, sectors: ScanSectors, span: float) -> str:
-        """clear / nudge (steer while driving) / approach (keep speed) / block (stop-turn)."""
-        ahead = sectors.ahead if math.isfinite(sectors.ahead) else 8.0
-        if ahead > self._clear_horizon():
-            return "clear"
-        left_f = sectors.left_front if math.isfinite(sectors.left_front) else 8.0
-        right_f = sectors.right_front if math.isfinite(sectors.right_front) else 8.0
-        side_open = left_f > 0.80 or right_f > 0.80
-        small = span <= 0.32
-        far = ahead > 0.90
-        if side_open and (small or far):
-            return "nudge"
-        if ahead > self.stop_dist + self._jam_extra:
-            return "approach"
-        return "block"
+        return occlusion_kind(
+            sectors, span, self.stop_dist, self._clear_horizon(), self._jam_extra
+        )
 
     def _note_motion(self, x: float, y: float, dt: float, trying_forward: bool, jammed: bool = False) -> bool:
         here = (float(x), float(y))
@@ -259,6 +300,18 @@ class CorridorFollower:
         self._blocked_t = 0.0
         self._stuck_t = 0.0
         self._reverse_left = 0.35
+        self._must_turn = 1.80
+        self._after_turn = float(turn)
+        self._hold_jam = True
+        self._reverse_yaw = float(yaw)
+        self._jam_latch = True
+        goal_x = self.follower.waypoints[-1][0] if self.follower.waypoints else x
+        if in_west_delivery_lane(x, y, goal_x) and float(y) > SOUTH_PEEL_Y + 0.15:
+            point = clip_to_nav_bounds(float(x) - 0.70, float(y))
+            if not in_center_wall_band(*point) and abs(point[0] - float(x)) > 0.20:
+                self.follower.insert_ahead(point)
+                self.follower.rebase_west_south(x, y)
+                self.follower.mode = "turn"
         self.last_status = "reverse"
         back = -min(0.45, max(0.20, 0.22 * abs(self.follower.max_lin)))
         return back, turn, False, self.last_status
@@ -286,6 +339,15 @@ class CorridorFollower:
             return 0.0
         return dodge
 
+    def _east_aisle_should_turn_west(self, x: float, y: float, yaw: float, goal_x: float) -> bool:
+        """Shelf/racks ahead at the yellow-lane corner: just turn west, do not detour."""
+        return (
+            float(goal_x) < 0.0
+            and float(x) >= 1.35
+            and float(y) >= 2.05
+            and math.sin(float(yaw)) > 0.12
+        )
+
     def step(
         self,
         x: float,
@@ -305,6 +367,11 @@ class CorridorFollower:
             back = -min(0.45, max(0.20, 0.22 * abs(self.follower.max_lin)))
             self.last_status = "reverse"
             return back, angular, False, self.last_status
+        if self._must_turn > 0.0:
+            self._must_turn = max(0.0, self._must_turn - float(dt))
+            self.follower.mode = "turn"
+            self.last_status = "turn"
+            return 0.0, self._after_turn, False, self.last_status
         if ranges is None:
             self._note_motion(x, y, dt, trying_forward=(linear > 0.04))
             self.last_status = "no_scan"
@@ -324,29 +391,51 @@ class CorridorFollower:
         kind = self._occlusion_kind(sectors, span)
         raw_jam = kind == "block"
         if raw_jam:
+            if not self._jam_latch:
+                self._jam_yaw = float(yaw)
             self._jam_latch = True
         translated = self._note_motion(
             x, y, dt, trying_forward=(linear > 0.04), jammed=raw_jam or self._jam_latch
         )
-        if not raw_jam and kind in ("clear", "nudge"):
+        if self._hold_jam and abs(wrap_to_pi(float(yaw) - self._reverse_yaw)) >= 0.70:
+            self._hold_jam = False
+        turned_off = abs(wrap_to_pi(float(yaw) - self._jam_yaw)) >= 0.50
+        # Chassis-height lidar only. Once the forward cone is clear after a
+        # turn, drive; do not wait to translate. Flicker 0.5↔1.6 at the same
+        # heading keeps the latch.
+        if kind == "clear" and not self._hold_jam and (turned_off or translated or not in_west_delivery_lane(x, y, goal_x)):
+            self._jam_latch = False
+            self._held_side = None
+        elif not raw_jam and kind == "nudge" and not self._hold_jam:
             if not in_west_delivery_lane(x, y, goal_x) or translated:
                 self._jam_latch = False
+                self._held_side = None
         jammed = self._jam_latch if in_west_delivery_lane(x, y, goal_x) else raw_jam
+        if self._hold_jam:
+            jammed = True
+        if self._east_aisle_should_turn_west(x, y, yaw, goal_x):
+            jammed = False
+            self._jam_latch = False
+            self._hold_jam = False
+            self._held_side = None
         if (
             self._stuck_t >= 0.90
             and not near_goal
             and kind in ("approach", "block")
+            and not self._east_aisle_should_turn_west(x, y, yaw, goal_x)
         ):
+            if not self._jam_latch:
+                self._jam_yaw = float(yaw)
             jammed = True
             self._jam_latch = True
         if jammed:
             self._blocked_t += float(dt)
             side = pick_detour_side(x, y, yaw, sectors, goal_x)
+            if self._held_side in ("left", "right"):
+                side = self._held_side
+            else:
+                self._held_side = side
             turn = (1.0 if side == "left" else -1.0) * self._avoid_ang
-            if in_west_delivery_lane(x, y, goal_x):
-                face = math.pi if float(x) > HUG_WEST_X + 0.04 else -math.pi / 2.0
-                face_err = wrap_to_pi(face - float(yaw))
-                turn = max(-self._avoid_ang, min(self._avoid_ang, 1.6 * face_err))
             frozen = self.follower.idx == self._detour_idx
             turning = self.follower.mode == "turn"
             moved_since = (
@@ -354,12 +443,11 @@ class CorridorFollower:
                 or math.hypot(float(x) - self._detour_at[0], float(y) - self._detour_at[1])
                 >= 0.50
             )
-            immobile = self._stuck_t >= 1.50
             can_detour = (
                 self._blocked_t >= self.blocked_s
                 and self.detours < self.max_detours
                 and not frozen
-                and (moved_since or immobile)
+                and moved_since
             )
             if can_detour:
                 dist = self.detour_m
@@ -394,12 +482,13 @@ class CorridorFollower:
             if turning and self._stuck_t < 2.00:
                 self.last_status = "turn"
                 return 0.0, angular, False, self.last_status
-            # Reverse only after detours are spent. A stuck-induced jam used
-            # to reverse immediately (stuck_t already 0.90) and never splice.
-            if self.detours >= self.max_detours or (
-                frozen and self._blocked_t >= 2.50
-            ):
+            if frozen and self._blocked_t >= 2.50:
                 return self._reverse_cmd(x, y, yaw, turn)
+            if self.detours >= self.max_detours:
+                if self._stuck_t >= 2.00:
+                    return self._reverse_cmd(x, y, yaw, turn)
+                self.last_status = f"blocked_{side}"
+                return 0.0, turn, False, self.last_status
             self.last_status = f"blocked_{side}"
             return 0.0, turn, False, self.last_status
         self._blocked_t = 0.0

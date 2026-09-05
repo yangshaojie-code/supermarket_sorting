@@ -1,0 +1,120 @@
+{
+  "arrived": false,
+  "goal": "delivery",
+  "in_zone": false,
+  "in_picking_zone": false,
+  "in_delivery_base": false,
+  "odom_xy": [
+    -0.023,
+    1.66
+  ],
+  "yaw": -1.926,
+  "head_joints": {
+    "slide": 0.11606276632849578,
+    "head_yaw": -8.280086780438438e-05,
+    "head_pitch": -0.11629452588539856
+  },
+  "goal_xy": [
+    -1.94,
+    -2.9
+  ],
+  "route": [
+    [
+      -0.2,
+      1.7
+    ],
+    [
+      -0.3,
+      1.35
+    ],
+    [
+      -0.3,
+      1.1
+    ],
+    [
+      -0.3,
+      0.85
+    ],
+    [
+      -0.3,
+      0.6
+    ],
+    [
+      -0.3,
+      0.35
+    ],
+    [
+      -0.2,
+      -0.15
+    ],
+    [
+      -0.2,
+      -0.4
+    ],
+    [
+      -0.2,
+      -0.6
+    ],
+    [
+      -0.377,
+      -0.777
+    ],
+    [
+      -0.554,
+      -0.954
+    ],
+    [
+      -0.7,
+      -1.1
+    ],
+    [
+      -0.7,
+      -1.35
+    ],
+    [
+      -0.7,
+      -1.6
+    ],
+    [
+      -0.877,
+      -1.777
+    ],
+    [
+      -1.054,
+      -1.954
+    ],
+    [
+      -1.23,
+      -2.13
+    ],
+    [
+      -1.407,
+      -2.307
+    ],
+    [
+      -1.584,
+      -2.484
+    ],
+    [
+      -1.6,
+      -2.7
+    ],
+    [
+      -1.94,
+      -2.9
+    ]
+  ],
+  "elapsed_s": 150.47,
+  "status": "safety_stop",
+  "detours": 0,
+  "plan_id": 162,
+  "plan_reason": "face",
+  "speed_scale": 4.0,
+  "max_lin": 1.2,
+  "max_ang": 1.65,
+  "stop_dist": 0.43,
+  "slow_dist": null,
+  "blocked_by_scan": true,
+  "log_json": "/workspace/baseline/outputs/p4/delivery_20260905_083330.json",
+  "log_txt": "/workspace/baseline/outputs/p4/delivery_20260905_083330.log"
+}
