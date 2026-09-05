@@ -1,0 +1,123 @@
+p4_delivery: start xy=(0.90,2.39) yaw=1.41 route=[(-0.4, 2.2), (-0.4, -2.7), (-1.94, -2.9)] stop=0.43 slow=0.83 max_lin=2.40 max_ang=1.20
+p4_delivery: xy=(0.90,2.39) yaw=1.41 wp=0/3 fwd=0.78 lin=0.00 ang=1.20 turn detours=0
+p4_delivery: xy=(0.90,2.39) yaw=1.64 wp=0/3 fwd=1.03 lin=0.00 ang=1.20 turn detours=0
+p4_delivery: xy=(0.90,2.39) yaw=1.98 wp=0/3 fwd=0.75 lin=0.00 ang=1.20 turn detours=0
+p4_delivery: xy=(0.90,2.39) yaw=2.32 wp=0/3 fwd=0.75 lin=0.00 ang=1.20 turn detours=0
+p4_delivery: xy=(0.91,2.39) yaw=2.66 wp=0/3 fwd=1.38 lin=0.00 ang=1.20 turn detours=0
+p4_delivery: xy=(0.91,2.39) yaw=2.94 wp=0/3 fwd=1.39 lin=0.00 ang=0.75 turn detours=0
+p4_delivery: xy=(0.88,2.39) yaw=-3.12 wp=0/3 fwd=2.17 lin=1.39 ang=0.28 cruise detours=0
+p4_delivery: xy=(0.76,2.37) yaw=-2.86 wp=0/3 fwd=2.50 lin=1.25 ang=-0.30 cruise detours=0
+p4_delivery: xy=(0.57,2.29) yaw=-2.60 wp=0/3 fwd=2.31 lin=0.86 ang=-1.00 cruise detours=0
+p4_delivery: xy=(0.38,2.18) yaw=-2.77 wp=0/3 fwd=2.09 lin=0.73 ang=-0.85 cruise detours=0
+p4_delivery: xy=(0.19,2.14) yaw=-3.01 wp=0/3 fwd=1.88 lin=0.61 ang=-0.53 cruise detours=0
+p4_delivery: xy=(0.03,2.13) yaw=3.12 wp=0/3 fwd=1.70 lin=0.00 ang=1.20 turn detours=0
+p4_delivery: xy=(-0.06,2.13) yaw=3.12 wp=1/3 fwd=1.63 lin=0.00 ang=1.20 turn detours=0
+p4_delivery: xy=(-0.08,2.13) yaw=-2.88 wp=1/3 fwd=1.60 lin=0.00 ang=1.20 turn detours=0
+p4_delivery: xy=(-0.08,2.13) yaw=-2.53 wp=1/3 fwd=1.61 lin=0.00 ang=1.20 turn detours=0
+p4_delivery: xy=(-0.08,2.13) yaw=-2.19 wp=1/3 fwd=1.83 lin=0.00 ang=1.20 turn detours=0
+p4_delivery: xy=(-0.08,2.12) yaw=-1.89 wp=1/3 fwd=1.98 lin=2.26 ang=0.55 cruise detours=0
+p4_delivery: xy=(-0.09,2.05) yaw=-1.63 wp=1/3 fwd=1.95 lin=2.40 ang=-0.56 cruise detours=0
+p4_delivery: xy=(-0.07,1.84) yaw=-1.32 wp=1/3 fwd=0.95 lin=2.16 ang=-1.20 cruise detours=0
+p4_delivery: xy=(0.01,1.64) yaw=-1.05 wp=1/3 fwd=0.58 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.06,1.55) yaw=-1.00 wp=1/3 fwd=0.45 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.54) yaw=-1.21 wp=1/3 fwd=0.55 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.55) yaw=-1.36 wp=1/3 fwd=0.71 lin=1.53 ang=-1.20 slow detours=0
+p4_delivery: xy=(0.07,1.55) yaw=-1.36 wp=1/3 fwd=0.71 lin=1.53 ang=-1.20 slow detours=0
+p4_delivery: xy=(0.07,1.55) yaw=-1.36 wp=1/3 fwd=0.72 lin=1.57 ang=-1.20 slow detours=0
+p4_delivery: xy=(0.07,1.54) yaw=-1.36 wp=1/3 fwd=0.72 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.54) yaw=-1.36 wp=1/3 fwd=0.72 lin=1.57 ang=-1.20 slow detours=0
+p4_delivery: xy=(0.07,1.54) yaw=-1.36 wp=1/3 fwd=0.72 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.54) yaw=-1.36 wp=1/3 fwd=0.71 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.54) yaw=-1.36 wp=1/3 fwd=0.71 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.53) yaw=-1.35 wp=1/3 fwd=0.70 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.54) yaw=-1.36 wp=1/3 fwd=0.71 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.54) yaw=-1.36 wp=1/3 fwd=0.73 lin=1.60 ang=-1.20 slow detours=0
+p4_delivery: xy=(0.07,1.53) yaw=-1.36 wp=1/3 fwd=0.71 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.53) yaw=-1.34 wp=1/3 fwd=0.69 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.53) yaw=-1.35 wp=1/3 fwd=0.70 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.53) yaw=-1.36 wp=1/3 fwd=0.71 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.53) yaw=-1.35 wp=1/3 fwd=0.70 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.52) yaw=-1.34 wp=1/3 fwd=0.70 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.53) yaw=-1.37 wp=1/3 fwd=0.73 lin=1.60 ang=-1.20 slow detours=0
+p4_delivery: xy=(0.07,1.53) yaw=-1.37 wp=1/3 fwd=0.72 lin=1.56 ang=-1.20 slow detours=0
+p4_delivery: xy=(0.07,1.52) yaw=-1.36 wp=1/3 fwd=0.72 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.52) yaw=-1.37 wp=1/3 fwd=0.73 lin=1.62 ang=-1.20 slow detours=0
+p4_delivery: xy=(0.07,1.52) yaw=-1.37 wp=1/3 fwd=0.73 lin=1.60 ang=-1.20 slow detours=0
+p4_delivery: xy=(0.07,1.52) yaw=-1.36 wp=1/3 fwd=0.71 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.51) yaw=-1.35 wp=1/3 fwd=0.71 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.51) yaw=-1.35 wp=1/3 fwd=0.70 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.52) yaw=-1.37 wp=1/3 fwd=0.73 lin=1.60 ang=-1.20 slow detours=0
+p4_delivery: xy=(0.07,1.51) yaw=-1.36 wp=1/3 fwd=0.71 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.51) yaw=-1.35 wp=1/3 fwd=0.70 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.51) yaw=-1.35 wp=1/3 fwd=0.71 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.51) yaw=-1.36 wp=1/3 fwd=0.72 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.51) yaw=-1.36 wp=1/3 fwd=0.72 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.50) yaw=-1.36 wp=1/3 fwd=0.71 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.50) yaw=-1.36 wp=1/3 fwd=0.71 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.50) yaw=-1.35 wp=1/3 fwd=0.70 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.50) yaw=-1.36 wp=1/3 fwd=0.72 lin=1.56 ang=-1.20 slow detours=0
+p4_delivery: xy=(0.07,1.50) yaw=-1.36 wp=1/3 fwd=0.72 lin=1.57 ang=-1.20 slow detours=0
+p4_delivery: xy=(0.07,1.50) yaw=-1.36 wp=1/3 fwd=0.71 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.49) yaw=-1.35 wp=1/3 fwd=0.71 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.49) yaw=-1.35 wp=1/3 fwd=0.71 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.49) yaw=-1.36 wp=1/3 fwd=0.71 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.49) yaw=-1.35 wp=1/3 fwd=0.71 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.49) yaw=-1.36 wp=1/3 fwd=0.73 lin=1.61 ang=-1.20 slow detours=0
+p4_delivery: xy=(0.07,1.49) yaw=-1.36 wp=1/3 fwd=0.72 lin=1.53 ang=-1.20 slow detours=0
+p4_delivery: xy=(0.07,1.48) yaw=-1.35 wp=1/3 fwd=0.71 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.49) yaw=-1.36 wp=1/3 fwd=0.71 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.49) yaw=-1.36 wp=1/3 fwd=0.71 lin=1.53 ang=-1.20 slow detours=0
+p4_delivery: xy=(0.07,1.48) yaw=-1.36 wp=1/3 fwd=0.71 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.48) yaw=-1.37 wp=1/3 fwd=0.72 lin=1.57 ang=-1.20 slow detours=0
+p4_delivery: xy=(0.07,1.48) yaw=-1.36 wp=1/3 fwd=0.73 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.48) yaw=-1.36 wp=1/3 fwd=0.72 lin=0.00 ang=-1.20 turn detours=0
+p4_delivery: xy=(0.07,1.48) yaw=-1.36 wp=1/3 fwd=0.73 lin=1.59 ang=-1.20 slow detours=0
+p4_delivery: xy=(0.07,1.48) yaw=-1.37 wp=1/3 fwd=0.72 lin=1.56 ang=-1.20 slow detours=0
+
+{
+  "arrived": false,
+  "goal": "delivery",
+  "in_zone": false,
+  "in_picking_zone": false,
+  "in_delivery_base": false,
+  "odom_xy": [
+    0.068,
+    1.476
+  ],
+  "yaw": -1.367,
+  "head_joints": {
+    "slide": 0.11587245801479312,
+    "head_yaw": 0.0016290682037825878,
+    "head_pitch": -0.11598301035576145
+  },
+  "goal_xy": [
+    -1.94,
+    -2.9
+  ],
+  "route": [
+    [
+      -0.4,
+      2.2
+    ],
+    [
+      -0.4,
+      -2.7
+    ],
+    [
+      -1.94,
+      -2.9
+    ]
+  ],
+  "elapsed_s": 150.38,
+  "status": "slow",
+  "detours": 0,
+  "speed_scale": 8.0,
+  "max_lin": 2.4,
+  "max_ang": 1.2,
+  "stop_dist": 0.432,
+  "slow_dist": 0.832,
+  "blocked_by_scan": false,
+  "log_json": "/workspace/baseline/outputs/p4/delivery_20260903_114131.json",
+  "log_txt": "/workspace/baseline/outputs/p4/delivery_20260903_114131.log"
+}
+p4 log: /workspace/baseline/outputs/p4/delivery_20260903_114131.log

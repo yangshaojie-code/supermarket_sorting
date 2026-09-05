@@ -1,0 +1,115 @@
+p4_delivery: start xy=(0.90,2.39) yaw=1.41 route=[(-0.4, 2.2), (-0.4, -2.7), (-1.94, -2.9)] stop=0.43 slow=0.83 max_lin=2.40 max_ang=1.20
+p4_delivery: xy=(0.90,2.39) yaw=1.41 wp=0/3 fwd=0.78 lin=0.00 ang=1.20 turn detours=0
+p4_delivery: xy=(0.90,2.39) yaw=1.64 wp=0/3 fwd=1.03 lin=0.00 ang=1.20 turn detours=0
+p4_delivery: xy=(0.90,2.39) yaw=1.98 wp=0/3 fwd=0.75 lin=0.00 ang=1.20 turn detours=0
+p4_delivery: xy=(0.90,2.39) yaw=2.32 wp=0/3 fwd=0.75 lin=0.00 ang=1.20 turn detours=0
+p4_delivery: xy=(0.90,2.39) yaw=2.61 wp=0/3 fwd=1.39 lin=0.00 ang=1.20 turn detours=0
+p4_delivery: xy=(0.90,2.39) yaw=2.90 wp=0/3 fwd=1.38 lin=0.00 ang=0.84 turn detours=0
+p4_delivery: xy=(0.88,2.39) yaw=-3.13 wp=0/3 fwd=2.18 lin=1.38 ang=0.29 cruise detours=0
+p4_delivery: xy=(0.78,2.37) yaw=-2.90 wp=0/3 fwd=2.68 lin=1.29 ang=-0.21 cruise detours=0
+p4_delivery: xy=(0.57,2.29) yaw=-2.62 wp=0/3 fwd=2.49 lin=0.88 ang=-0.95 cruise detours=0
+p4_delivery: xy=(0.38,2.19) yaw=-2.78 wp=0/3 fwd=2.24 lin=0.74 ang=-0.82 cruise detours=0
+p4_delivery: xy=(0.19,2.14) yaw=-3.01 wp=0/3 fwd=2.05 lin=0.00 ang=1.20 turn detours=0
+p4_delivery: xy=(0.07,2.13) yaw=-3.12 wp=0/3 fwd=1.93 lin=0.00 ang=1.20 turn detours=0
+p4_delivery: xy=(0.03,2.13) yaw=-2.90 wp=0/3 fwd=1.90 lin=0.00 ang=1.20 turn detours=0
+p4_delivery: xy=(0.03,2.13) yaw=-2.53 wp=0/3 fwd=1.90 lin=0.00 ang=1.03 turn detours=0
+p4_delivery: xy=(0.02,2.12) yaw=-2.25 wp=0/3 fwd=2.08 lin=0.45 ang=0.44 cruise detours=0
+p4_delivery: xy=(-0.02,2.05) yaw=-2.12 wp=0/3 fwd=2.08 lin=0.44 ang=-0.48 cruise detours=0
+p4_delivery: xy=(-0.07,1.97) yaw=-2.21 wp=1/3 fwd=1.98 lin=0.00 ang=0.61 turn detours=0
+p4_delivery: xy=(-0.09,1.95) yaw=-2.11 wp=1/3 fwd=1.95 lin=0.00 ang=0.48 turn detours=0
+p4_delivery: xy=(-0.09,1.95) yaw=-1.99 wp=1/3 fwd=1.95 lin=0.00 ang=0.22 turn detours=0
+p4_delivery: xy=(-0.10,1.93) yaw=-1.93 wp=1/3 fwd=1.93 lin=2.20 ang=0.09 cruise detours=0
+p4_delivery: xy=(-0.13,1.84) yaw=-1.86 wp=1/3 fwd=1.85 lin=2.27 ang=0.03 cruise detours=0
+p4_delivery: xy=(-0.18,1.64) yaw=-1.81 wp=1/3 fwd=1.66 lin=2.32 ang=0.02 cruise detours=0
+p4_delivery: xy=(-0.24,1.36) yaw=-1.76 wp=1/3 fwd=1.48 lin=2.35 ang=0.05 cruise detours=0
+p4_delivery: xy=(-0.32,0.92) yaw=-1.71 wp=1/3 fwd=1.16 lin=2.37 ang=0.11 cruise detours=0
+p4_delivery: xy=(-0.37,0.47) yaw=-1.67 wp=1/3 fwd=0.70 lin=1.60 ang=0.51 slow detours=0
+p4_delivery: xy=(-0.41,0.01) yaw=-1.63 wp=1/5 fwd=0.23 lin=0.00 ang=0.66 blocked_left detours=2
+p4_delivery: xy=(-0.46,-0.03) yaw=-1.42 wp=1/5 fwd=0.13 lin=-0.45 ang=1.20 reverse detours=5
+p4_delivery: xy=(-0.52,-0.02) yaw=-1.26 wp=1/6 fwd=0.14 lin=-0.45 ang=1.20 reverse detours=8
+p4_delivery: xy=(-0.52,-0.06) yaw=-1.26 wp=1/6 fwd=0.14 lin=-0.45 ang=1.20 reverse detours=8
+p4_delivery: xy=(-0.57,0.07) yaw=-1.43 wp=1/6 fwd=0.25 lin=0.00 ang=0.66 blocked_left detours=8
+p4_delivery: xy=(-0.61,0.18) yaw=-1.56 wp=1/6 fwd=0.37 lin=0.00 ang=0.66 blocked_left detours=8
+p4_delivery: xy=(-0.62,0.31) yaw=-1.68 wp=1/6 fwd=0.49 lin=0.00 ang=1.20 turn detours=8
+p4_delivery: xy=(-0.62,0.40) yaw=-1.71 wp=1/6 fwd=0.59 lin=0.00 ang=1.20 turn detours=8
+p4_delivery: xy=(-0.61,0.44) yaw=-1.51 wp=1/6 fwd=0.63 lin=0.00 ang=1.20 turn detours=8
+p4_delivery: xy=(-0.61,0.44) yaw=-1.18 wp=1/6 fwd=0.64 lin=0.00 ang=1.20 turn detours=8
+p4_delivery: xy=(-0.60,0.42) yaw=-0.85 wp=1/6 fwd=0.67 lin=0.67 ang=1.18 slow detours=8
+p4_delivery: xy=(-0.51,0.35) yaw=-0.46 wp=1/6 fwd=0.93 lin=0.90 ang=-0.57 cruise detours=8
+p4_delivery: xy=(-0.38,0.31) yaw=-0.24 wp=1/6 fwd=0.76 lin=0.00 ang=-1.20 turn detours=8
+p4_delivery: xy=(-0.33,0.29) yaw=-0.41 wp=1/6 fwd=0.72 lin=0.00 ang=-1.20 turn detours=8
+p4_delivery: xy=(-0.31,0.29) yaw=-0.71 wp=1/6 fwd=0.76 lin=0.65 ang=0.08 slow detours=8
+p4_delivery: xy=(-0.25,0.21) yaw=-1.02 wp=1/6 fwd=0.85 lin=0.70 ang=-0.07 cruise detours=8
+p4_delivery: xy=(-0.17,0.05) yaw=-1.13 wp=1/6 fwd=0.85 lin=0.49 ang=0.14 cruise detours=8
+p4_delivery: xy=(-0.12,-0.02) yaw=-1.15 wp=2/6 fwd=0.77 lin=0.00 ang=0.69 turn detours=8
+p4_delivery: xy=(-0.12,-0.01) yaw=-1.16 wp=2/6 fwd=0.80 lin=0.00 ang=0.69 turn detours=8
+p4_delivery: xy=(-0.12,-0.00) yaw=-1.00 wp=2/6 fwd=0.68 lin=0.00 ang=0.34 turn detours=8
+p4_delivery: xy=(-0.11,-0.01) yaw=-0.90 wp=2/6 fwd=0.62 lin=0.21 ang=0.47 slow detours=8
+p4_delivery: xy=(-0.08,-0.04) yaw=-0.83 wp=2/6 fwd=0.56 lin=0.14 ang=-0.01 slow detours=8
+p4_delivery: xy=(-0.06,-0.07) yaw=-0.92 wp=4/6 fwd=0.56 lin=0.00 ang=-1.20 turn detours=8
+p4_delivery: xy=(-0.06,-0.07) yaw=-1.07 wp=4/6 fwd=0.64 lin=0.00 ang=-1.20 turn detours=8
+p4_delivery: xy=(-0.06,-0.07) yaw=-1.07 wp=4/6 fwd=0.65 lin=0.00 ang=-1.20 turn detours=8
+p4_delivery: xy=(-0.06,-0.07) yaw=-1.08 wp=4/6 fwd=0.65 lin=0.00 ang=-1.20 turn detours=8
+p4_delivery: xy=(-0.06,-0.07) yaw=-1.08 wp=4/6 fwd=0.65 lin=0.00 ang=-1.20 turn detours=8
+p4_delivery: xy=(-0.06,-0.07) yaw=-1.08 wp=4/6 fwd=0.65 lin=0.00 ang=-1.20 turn detours=8
+p4_delivery: xy=(-0.05,-0.07) yaw=-1.09 wp=4/6 fwd=0.65 lin=0.00 ang=-1.20 turn detours=8
+p4_delivery: xy=(-0.05,-0.07) yaw=-1.09 wp=4/6 fwd=0.65 lin=0.00 ang=-1.20 turn detours=8
+p4_delivery: xy=(-0.05,-0.07) yaw=-1.09 wp=4/6 fwd=0.65 lin=0.00 ang=-1.20 turn detours=8
+p4_delivery: xy=(-0.05,-0.07) yaw=-1.10 wp=4/6 fwd=0.66 lin=0.00 ang=-1.20 turn detours=8
+p4_delivery: xy=(-0.05,-0.07) yaw=-1.10 wp=4/6 fwd=0.66 lin=0.00 ang=-1.20 turn detours=8
+p4_delivery: xy=(-0.05,-0.07) yaw=-1.10 wp=4/6 fwd=0.66 lin=0.00 ang=-1.20 turn detours=8
+p4_delivery: xy=(-0.05,-0.07) yaw=-1.10 wp=4/6 fwd=0.66 lin=0.00 ang=-1.20 turn detours=8
+p4_delivery: xy=(-0.05,-0.07) yaw=-1.10 wp=4/6 fwd=0.66 lin=0.00 ang=-1.20 turn detours=8
+p4_delivery: xy=(-0.05,-0.07) yaw=-1.10 wp=4/6 fwd=0.66 lin=0.00 ang=-1.20 turn detours=8
+p4_delivery: xy=(-0.05,-0.07) yaw=-1.10 wp=4/6 fwd=0.66 lin=0.00 ang=-1.20 turn detours=8
+p4_delivery: xy=(-0.05,-0.07) yaw=-1.10 wp=4/6 fwd=0.66 lin=0.00 ang=-1.20 turn detours=8
+p4_delivery: xy=(-0.05,-0.07) yaw=-1.10 wp=4/6 fwd=0.66 lin=0.00 ang=-1.20 turn detours=8
+p4_delivery: xy=(-0.05,-0.07) yaw=-1.10 wp=4/6 fwd=0.66 lin=0.00 ang=-1.20 turn detours=8
+Traceback (most recent call last):
+  File "/workspace/baseline/runtime/p4_nav.py", line 186, in navigate
+    rclpy_mod.spin_once(node, timeout_sec=period)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 208, in spin_once
+    executor.spin_once(timeout_sec=timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 808, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 797, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(timeout_sec=timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 780, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 677, in _wait_for_ready_callbacks
+    wait_set.wait(timeout_nsec)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/baseline/runtime/p4_nav.py", line 292, in main
+    report = navigate(
+  File "/workspace/baseline/runtime/p4_nav.py", line 259, in navigate
+    controller.stop_base()
+  File "/workspace/baseline/runtime/ros_robot_control.py", line 64, in stop_base
+    self.publish_velocity()
+  File "/workspace/baseline/runtime/ros_robot_control.py", line 61, in publish_velocity
+    self.cmd_vel_pub.publish(message)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/publisher.py", line 70, in publish
+    self.__publisher.publish(msg)
+rclpy._rclpy_pybind11.RCLError: Failed to publish: publisher's context is invalid, at ./src/rcl/publisher.c:389
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/workspace/baseline/runtime/p4_nav.py", line 310, in <module>
+    raise SystemExit(main())
+  File "/workspace/baseline/runtime/p4_nav.py", line 306, in main
+    rclpy.shutdown()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 130, in shutdown
+    _shutdown(context=context)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/utilities.py", line 58, in shutdown
+    return context.shutdown()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/context.py", line 102, in shutdown
+    self.__context.shutdown()
+rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:241

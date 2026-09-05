@@ -1,0 +1,46 @@
+{
+  "arrived": false,
+  "goal": "shelf",
+  "in_zone": false,
+  "in_picking_zone": false,
+  "in_delivery_base": false,
+  "odom_xy": [
+    1.329,
+    1.668
+  ],
+  "yaw": 2.897,
+  "head_joints": {
+    "slide": 0.11606752627640801,
+    "head_yaw": 0.002577994596647327,
+    "head_pitch": -0.11620121320433725
+  },
+  "goal_xy": [
+    0.852,
+    2.475
+  ],
+  "route": [
+    [
+      1.92,
+      2.0
+    ],
+    [
+      0.852,
+      2.0
+    ],
+    [
+      0.852,
+      2.475
+    ]
+  ],
+  "elapsed_s": 151.46,
+  "status": "slow",
+  "detours": 0,
+  "speed_scale": 8.0,
+  "max_lin": 2.4,
+  "max_ang": 1.65,
+  "stop_dist": 0.432,
+  "slow_dist": 0.832,
+  "blocked_by_scan": false,
+  "log_json": "/workspace/baseline/outputs/p4/shelf_20260903_124827.json",
+  "log_txt": "/workspace/baseline/outputs/p4/shelf_20260903_124827.log"
+}

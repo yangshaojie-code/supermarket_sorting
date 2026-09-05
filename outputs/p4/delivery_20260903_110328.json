@@ -1,0 +1,42 @@
+{
+  "arrived": false,
+  "goal": "delivery",
+  "in_zone": false,
+  "in_picking_zone": false,
+  "in_delivery_base": false,
+  "odom_xy": [
+    -0.774,
+    0.249
+  ],
+  "yaw": -2.168,
+  "head_joints": {
+    "slide": 0.11606557706530034,
+    "head_yaw": -0.009855301162875044,
+    "head_pitch": -0.11701969357116392
+  },
+  "goal_xy": [
+    -1.94,
+    -2.9
+  ],
+  "route": [
+    [
+      -1.94,
+      2.2
+    ],
+    [
+      -1.94,
+      -2.9
+    ]
+  ],
+  "elapsed_s": 150.45,
+  "status": "slow",
+  "detours": 8,
+  "speed_scale": 8.0,
+  "max_lin": 2.4,
+  "max_ang": 1.2,
+  "stop_dist": 0.432,
+  "slow_dist": 0.832,
+  "blocked_by_scan": false,
+  "log_json": "/workspace/baseline/outputs/p4/delivery_20260903_110328.json",
+  "log_txt": "/workspace/baseline/outputs/p4/delivery_20260903_110328.log"
+}

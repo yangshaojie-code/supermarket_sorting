@@ -1,0 +1,105 @@
+p4_shelf: start xy=(1.92,-3.17) yaw=1.57 route=[(1.92, 2.32), (0.852, 2.32), (0.852, 2.475)] stop=0.43 slow=0.83 max_lin=2.40 max_ang=1.65
+p4_shelf: xy=(1.92,-3.17) yaw=1.57 wp=0/3 fwd=1.43 lin=1.18 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.92,-3.13) yaw=1.57 wp=0/3 fwd=1.43 lin=1.18 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.92,-2.99) yaw=1.57 wp=0/3 fwd=1.44 lin=1.18 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.92,-2.79) yaw=1.57 wp=0/3 fwd=1.44 lin=1.19 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.92,-2.54) yaw=1.57 wp=0/3 fwd=1.45 lin=1.20 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.92,-2.30) yaw=1.57 wp=0/3 fwd=1.45 lin=1.20 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.92,-2.02) yaw=1.57 wp=0/3 fwd=1.45 lin=1.20 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.92,-1.79) yaw=1.57 wp=0/3 fwd=1.45 lin=1.20 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.92,-1.51) yaw=1.57 wp=0/3 fwd=1.46 lin=1.21 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.91,-1.23) yaw=1.57 wp=0/3 fwd=1.46 lin=1.21 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.91,-0.94) yaw=1.57 wp=0/3 fwd=1.46 lin=1.21 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.91,-0.71) yaw=1.57 wp=0/3 fwd=1.46 lin=1.21 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.91,-0.33) yaw=1.57 wp=0/3 fwd=1.47 lin=1.22 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.91,0.00) yaw=1.57 wp=0/3 fwd=1.47 lin=1.22 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.91,0.32) yaw=1.57 wp=0/3 fwd=1.47 lin=1.22 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.91,0.59) yaw=1.57 wp=0/3 fwd=1.48 lin=1.23 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.91,0.92) yaw=1.57 wp=0/3 fwd=1.48 lin=1.23 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.91,1.20) yaw=1.57 wp=0/3 fwd=1.48 lin=1.17 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.91,1.51) yaw=1.57 wp=0/3 fwd=1.48 lin=0.84 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.91,1.74) yaw=1.57 wp=0/3 fwd=1.35 lin=0.59 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.90,1.88) yaw=1.57 wp=0/3 fwd=1.21 lin=0.43 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.90,2.00) yaw=1.57 wp=0/3 fwd=1.10 lin=0.30 ang=-0.11 cruise detours=0
+p4_shelf: xy=(1.90,2.08) yaw=1.56 wp=0/3 fwd=1.01 lin=0.23 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.91,2.14) yaw=1.54 wp=0/3 fwd=0.96 lin=0.17 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.91,2.18) yaw=1.53 wp=0/3 fwd=0.92 lin=0.13 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.91,2.22) yaw=1.51 wp=0/3 fwd=0.88 lin=0.10 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.91,2.25) yaw=1.51 wp=1/3 fwd=0.85 lin=0.00 ang=1.65 turn detours=0
+p4_shelf: xy=(1.91,2.26) yaw=1.87 wp=1/3 fwd=0.93 lin=0.00 ang=1.65 turn detours=0
+p4_shelf: xy=(1.91,2.26) yaw=2.34 wp=1/3 fwd=0.93 lin=0.00 ang=1.65 turn detours=0
+p4_shelf: xy=(1.91,2.25) yaw=2.72 wp=1/3 fwd=1.56 lin=0.00 ang=0.93 turn detours=0
+p4_shelf: xy=(1.91,2.25) yaw=2.95 wp=1/3 fwd=1.57 lin=0.59 ang=0.24 cruise detours=0
+p4_shelf: xy=(1.86,2.26) yaw=3.10 wp=1/3 fwd=2.31 lin=0.99 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.74,2.26) yaw=-3.06 wp=1/3 fwd=1.22 lin=0.76 ang=-0.35 cruise detours=0
+p4_shelf: xy=(1.57,2.24) yaw=-3.09 wp=1/3 fwd=2.90 lin=0.68 ang=-0.32 cruise detours=0
+p4_shelf: xy=(1.41,2.24) yaw=3.12 wp=1/3 fwd=2.75 lin=0.59 ang=-0.17 cruise detours=0
+p4_shelf: xy=(1.30,2.24) yaw=3.09 wp=1/3 fwd=2.62 lin=0.42 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.20,2.25) yaw=3.05 wp=2/3 fwd=2.52 lin=0.00 ang=-1.65 turn detours=0
+p4_shelf: xy=(1.16,2.26) yaw=2.75 wp=2/3 fwd=1.67 lin=0.00 ang=-1.65 turn detours=0
+p4_shelf: xy=(1.15,2.26) yaw=2.40 wp=2/3 fwd=1.00 lin=0.00 ang=-1.65 turn detours=0
+p4_shelf: xy=(1.15,2.26) yaw=1.98 wp=2/3 fwd=0.99 lin=0.00 ang=-0.90 turn detours=0
+p4_shelf: xy=(1.15,2.26) yaw=1.74 wp=2/3 fwd=1.10 lin=0.22 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.14,2.31) yaw=1.74 wp=2/3 fwd=1.06 lin=0.20 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.13,2.36) yaw=1.76 wp=2/3 fwd=1.04 lin=0.17 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.13,2.41) yaw=1.76 wp=2/3 fwd=1.12 lin=0.16 ang=0.00 cruise detours=0
+p4_shelf: xy=(1.12,2.44) yaw=1.87 wp=2/3 fwd=1.07 lin=0.00 ang=1.65 turn detours=0
+p4_shelf: xy=(1.12,2.45) yaw=2.36 wp=2/3 fwd=0.82 lin=0.00 ang=1.52 turn detours=0
+p4_shelf: xy=(1.12,2.45) yaw=2.71 wp=2/3 fwd=0.86 lin=0.00 ang=0.76 turn detours=0
+p4_shelf: xy=(1.11,2.45) yaw=2.90 wp=2/3 fwd=1.53 lin=0.17 ang=0.33 cruise detours=0
+p4_shelf: xy=(1.07,2.46) yaw=3.00 wp=2/3 fwd=1.51 lin=0.20 ang=0.16 cruise detours=0
+p4_shelf: xy=(1.02,2.47) yaw=3.04 wp=2/3 fwd=1.47 lin=0.17 ang=0.00 cruise detours=0
+p4_shelf: xy=(0.98,2.47) yaw=3.05 wp=2/3 fwd=1.43 lin=0.12 ang=0.11 cruise detours=0
+p4_shelf: xy=(0.95,2.47) yaw=2.95 wp=3/3 fwd=1.39 lin=0.00 ang=-1.65 turn detours=0
+p4_shelf: xy=(0.95,2.47) yaw=2.58 wp=3/3 fwd=1.37 lin=0.00 ang=-1.65 turn detours=0
+p4_shelf: xy=(0.95,2.47) yaw=2.11 wp=3/3 fwd=0.70 lin=0.00 ang=-1.61 turn detours=0
+p4_shelf: xy=(0.95,2.47) yaw=1.67 wp=3/3 fwd=0.97 lin=0.00 ang=-0.64 turn detours=0
+p4_shelf: xy=(0.95,2.47) yaw=1.48 wp=3/3 fwd=0.95 lin=0.00 ang=-0.21 turn detours=0
+
+{
+  "arrived": true,
+  "goal": "shelf",
+  "in_zone": true,
+  "in_picking_zone": true,
+  "in_delivery_base": false,
+  "odom_xy": [
+    0.947,
+    2.472
+  ],
+  "yaw": 1.427,
+  "head_joints": {
+    "slide": 0.11606280200223168,
+    "head_yaw": 0.0027240794984460925,
+    "head_pitch": -0.11630203545362383
+  },
+  "goal_xy": [
+    0.852,
+    2.475
+  ],
+  "route": [
+    [
+      1.92,
+      2.32
+    ],
+    [
+      0.852,
+      2.32
+    ],
+    [
+      0.852,
+      2.475
+    ]
+  ],
+  "elapsed_s": 114.29,
+  "status": "arrived",
+  "detours": 0,
+  "speed_scale": 8.0,
+  "max_lin": 2.4,
+  "max_ang": 1.65,
+  "stop_dist": 0.432,
+  "slow_dist": 0.832,
+  "blocked_by_scan": false,
+  "log_json": "/workspace/baseline/outputs/p4/shelf_20260904_085259.json",
+  "log_txt": "/workspace/baseline/outputs/p4/shelf_20260904_085259.log"
+}
+p4 log: /workspace/baseline/outputs/p4/shelf_20260904_085259.log
